@@ -25,11 +25,9 @@ function Scene() {
 
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
         <color args={["white"]} attach="background" />
-
-
-
+        
         <Suspense fallback={null}>
-        <AnimatedPhotoOverlay photoUrl={photoOverlayUrl} startingScale={1} endingScale={0.6}/>
+        <AnimatedPhotoOverlay photoUrl={photoOverlayUrl} startingScale={1.5} endingScale={0.6}/>
           <FoodCart position={[60, -30, -250]} />
           <PhotoSphere photoUrl={photoSphereUrl} position={[0,-100,0]} />
         </Suspense>

@@ -1,52 +1,87 @@
 body {
-    /* Reseting the default here */
-    margin: 0;
-  }
-  
-  #article_wrapper {
-    position: relative;
-    background-color: grey;
-    height: 5000px; /* Length of the interactive scroll article */
-  }
-  
-  #canvas_wrapper {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .scroll_slide {
-    color: white;
-    position: absolute;
-    width: 50vw;
-    padding-left: 20px;
-    z-index: "50";
-  }
-  
-  .photo-overlay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .photo-overlay-img{
-    height: 100%;
-    width: auto;
-    transform: scale(1.5);
-  }
-  
-  .title{
-    font-size: 150px;
-  }
-  
-  .subtitle{
-    font-size: 50px;
-  }
+  /* Reseting the default here */
+  margin: 0;
+}
+
+#article_wrapper {
+  position: relative;
+  background-color: grey;
+  height: 1000vh; /* Length of the interactive scroll article */
+}
+
+#canvas_wrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.photo-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-overlay-img{
+  height: 100%;
+  width: auto;
+  transform: scale(1.5);
+}
+
+.titleSlide{
+  margin-top: 7vh;
+  margin-left: 20px;
+}
+
+.title{
+  font-size: 150px;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.subtitle{
+  font-size: 40px;
+  background-color: rgb(255, 255, 255, 0.5);
+  width: fit-content;
+}
+
+.credits{
+  font-size: 25px;
+  background-color: rgb(255, 255, 255, 0.5);
+  width: fit-content;
+  margin-top: 25px;
+}
+
+.simpleSlide{
+  position: absolute;
+  text-align: right;
+  right: 50px;
+  font-size: 40px;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 40vw;
+  z-index: 50;
+}
+
+.marker-div{
+  width: 300px;
+  height: fit-content;
+  background-color: rgba(0, 82, 169, 0.2);
+  padding: 20px;
+}
+
+.marker-title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.marker-body{
+  font-size: 20px;
+}
