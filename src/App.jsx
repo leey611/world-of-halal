@@ -8,6 +8,7 @@ import { AnimationTimeline } from "./AnimationTimeline";
 
 import "./App.css";
 
+
 function getScrollProgress() {
   const winScroll = window.document.documentElement.scrollTop;
 
@@ -37,8 +38,10 @@ function App() {
 
   return (
     <div id="article_wrapper">
+      
       {/* HTML slides are nested here and we use vh values to specify where they are */}
-      <TitleSlide viewportPosition={0} title={"The King of Halal"} subtitle={"How one man and his halal cart keeps Downtown Brooklyn fed"} credits={"By Joyce Chen, Yu Lee, Oliver Zichen Yuan, & Isabel Lee"}></TitleSlide>
+      <TitleSlide viewportPosition={4} title={"The King of Halal"} subtitle={"How one man and his halal cart keeps Downtown Brooklyn fed"} credits={"By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee"}></TitleSlide>
+     
       <SimpleSlide viewportPosition={100}>On the side of Brooklyn Bridge Boulevard, in the heart of downtown Brooklyn, you’ll find an establishment that has withstood the test of time. Ayman [Surname] has operated his halal cart King Halal Food since 2000, nearly half of the 51-year-old’s life. He is one of an estimated 20,000 vendors that work tirelessly to feed the people of New York City every day. </SimpleSlide>
 
       <SimpleSlide viewportPosition={150}>“Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear of his truck while a steady line forms in front. We visited him on a gusty Wednesday, during an off hour in the afternoon-- and yet, people kept lining up, drawn by the sizzle and aroma of fire-grilled meat.</SimpleSlide>
@@ -47,6 +50,8 @@ function App() {
 </SimpleSlide>
       <SimpleSlide viewportPosition={500}>Hello from slide 4</SimpleSlide>
       <SimpleSlide viewportPosition={550}>Hello from slide 5</SimpleSlide>
+      
+
 
       {/* 3D scene container */}
       <Scene />

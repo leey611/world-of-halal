@@ -17,7 +17,7 @@ body {
   height: 100vh;
 }
 
-.photo-overlay{
+.photo-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,37 +29,48 @@ body {
   align-items: center;
 }
 
-.photo-overlay-img{
+.photo-overlay-img {
   height: 100%;
   width: auto;
   transform: scale(1.5);
 }
 
-.titleSlide{
+.titleSlide {
   margin-top: 7vh;
   margin-left: 20px;
 }
 
-.title{
+@font-face {
+  font-family: "love_ya_like_a_sisterregular";
+  src: url("/titleFont.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
   font-size: 150px;
-  color: black;
-  background-color: rgb(255, 255, 255, 0.5);
+  color: white;
+  /* background-color: rgb(255, 255, 255, 0.5); */
+  font-family: "love_ya_like_a_sisterregular";
+  text-shadow: 1px 1px 4px black;
 }
 
-.subtitle{
+.subtitle {
   font-size: 40px;
-  background-color: rgb(255, 255, 255, 0.5);
+  /* background-color: rgb(255, 255, 255, 0.5); */
   width: fit-content;
+  font-family: "love_ya_like_a_sisterregular";
+  text-shadow: 1px 1px 2.5px white;
 }
 
-.credits{
+.credits {
   font-size: 25px;
   background-color: rgb(255, 255, 255, 0.5);
   width: fit-content;
   margin-top: 25px;
 }
 
-.simpleSlide{
+.simpleSlide {
   position: absolute;
   text-align: right;
   right: 50px;
@@ -70,18 +81,18 @@ body {
   z-index: 50;
 }
 
-.marker-div{
+.marker-div {
   width: 300px;
   height: fit-content;
   background-color: rgba(0, 82, 169, 0.2);
   padding: 20px;
 }
 
-.marker-title{
+.marker-title {
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-.marker-body{
+.marker-body {
   font-size: 20px;
 }
