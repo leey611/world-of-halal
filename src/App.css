@@ -68,6 +68,7 @@ body {
   background-color: rgb(255, 255, 255, 0.5);
   width: fit-content;
   margin-top: 25px;
+  text-align: left;
 }
 
 .simpleSlide {
