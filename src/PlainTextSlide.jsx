@@ -1,14 +1,13 @@
-function SimpleSlide(props) {
+function PlainTextSlide(props) {
     const { children, viewportPosition } = props;
     return (
-      <div className="simpleSlide"
+      <div className="plainTextSlide"
         style={{
           top: `${viewportPosition}vh`,
-        }}
-      >
+        }}>
         {children}
       </div>
     );
   }
   
-  export default SimpleSlide;
+  export default PlainTextSlide;

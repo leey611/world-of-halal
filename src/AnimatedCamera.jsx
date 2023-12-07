@@ -69,27 +69,36 @@ function AnimatedCamera() {
       },
       "camera-4"
     );
+    
+    AnimationTimeline.to(
+      cameraRef.current.rotation, {}, "camera-5");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait1}, "wait-1");
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.FadeCartIn}, "fade-cart-in");
+
     AnimationTimeline.to(
       cameraRef.current.position,
       {
-        x: 0,
-        y: -100,
-        z: 0,
-        duration: AnimationTimings.Camera4
+        x: -10,
+        y: 20,
+        z: -140,
+        duration: AnimationTimings.ZoomInCart
       },
-      "camera-4"
+      "zoom-in-cart"
     );
-    
+
     AnimationTimeline.to(
       cameraRef.current.rotation,
       {
-        x: MathUtils.degToRad(-20),
+        x: MathUtils.degToRad(-10),
         y: 0,
         z: 0,
-        duration: AnimationTimings.Camera5
+        duration: AnimationTimings.ZoomInCart
       },
-      "camera-5"
+      "zoom-in-cart"
     );
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.FadeSphereIn}, "fade-sphere-in");
 
     AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.End}, "camera-end");
 

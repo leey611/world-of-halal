@@ -1,11 +1,12 @@
 import { useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 
 import AnimatedCamera from "./AnimatedCamera";
 import FoodCart from "./FoodCart";
 import PhotoSphere from "./PhotoSphere";
 import AnimatedPhotoOverlay from "./AnimatedPhotoOverlay";
+import AnimatedStickyOverlay from "./AnimatedStickyOverlay";
 
 const photoOverlayUrl = '/images/halal-photo-1.jpg'
 const photoSphereUrl = '/images/sphere_small.jpg'
@@ -28,8 +29,9 @@ function Scene() {
         
         <Suspense fallback={null}>
         <AnimatedPhotoOverlay photoUrl={photoOverlayUrl} startingScale={1.5} endingScale={0.6}/>
-          <FoodCart position={[60, -30, -250]} />
-          <PhotoSphere photoUrl={photoSphereUrl} position={[0,-100,0]} />
+        <AnimatedStickyOverlay/>
+        <FoodCart position={[60, -30, -250]} />
+        <PhotoSphere photoUrl={photoSphereUrl} position={[-10, 20, -140]}/>
         </Suspense>
       </Canvas>
     </div>

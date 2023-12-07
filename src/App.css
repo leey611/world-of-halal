@@ -71,15 +71,36 @@ body {
   text-align: left;
 }
 
-.simpleSlide {
+.overlaySlide {
   position: absolute;
   text-align: right;
   right: 50px;
-  font-size: 40px;
+  font-size: 35px;
   color: black;
   background-color: rgb(255, 255, 255, 0.5);
   width: 40vw;
   z-index: 50;
+  padding: 10px;
+}
+
+.plainTextSlide{
+  position: absolute;
+  width: 60vw;
+  left: 20vw;
+  color: black;
+  font-size: 25px;
+  z-index: 50;
+}
+
+.sticky-overlay{
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 .marker-div {
@@ -87,6 +108,7 @@ body {
   height: fit-content;
   background-color: rgba(0, 82, 169, 0.2);
   padding: 20px;
+  opacity: 0;
 }
 
 .marker-title {

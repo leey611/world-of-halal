@@ -11,9 +11,6 @@ function AnimatedPhotoOverlay(props){
   
   useEffect(() => {
     if (!loaded) { return; }
-
-    AnimationTimeline.to(".photo-overlay-img", {duration: AnimationTimings.Start}, "start");
-
     AnimationTimeline.to(
       ".photo-overlay-img",
       { scale: endingScale, duration: AnimationTimings.PhotoScale },
@@ -25,14 +22,7 @@ function AnimatedPhotoOverlay(props){
       { opacity: 0, duration: AnimationTimings.PhotoFade },
       "photo-fade"
     );
-    
-    AnimationTimeline.to(".photo-overlay-img", { duration: AnimationTimings.Camera1 }, "camera-1");
-    AnimationTimeline.to(".photo-overlay-img", { duration: AnimationTimings.Camera2 }, "camera-2");
-    AnimationTimeline.to(".photo-overlay-img", { duration: AnimationTimings.Camera3 }, "camera-3");
-    AnimationTimeline.to(".photo-overlay-img", { duration: AnimationTimings.Camera4 }, "camera-4");
-    AnimationTimeline.to(".photo-overlay-img", { duration: AnimationTimings.Camera5 }, "camera-5");
-    AnimationTimeline.to(".photo-overlay-img", { duration: AnimationTimings.End }, "camera-end");
-
+  
     return () => AnimationTimeline.kill();
   }, [loaded]);
   
