@@ -8,8 +8,8 @@ import PhotoSphere from "./PhotoSphere";
 import AnimatedPhotoOverlay from "./AnimatedPhotoOverlay";
 import AnimatedStickyOverlay from "./AnimatedStickyOverlay";
 
-const photoOverlayUrl = '/images/halal-photo-1.jpg'
-const photoSphereUrl = '/images/sphere_small.jpg'
+const photoOverlayUrl = "/images/halal-photo-1.jpg";
+const photoSphereUrl = "/images/sphere_small.jpg";
 
 function Scene() {
   return (
@@ -19,19 +19,23 @@ function Scene() {
 
         {/* Camera 🎥 */}
         <AnimatedCamera />
-        
+
         {/* Lights 💡 */}
-        <ambientLight intensity={1.5} />
-        <pointLight position={[0, 80, -200]} intensity={5000} />
+        <ambientLight intensity={0.8} />
+        <pointLight position={[0, 80, -200]} intensity={10000} />
 
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
         <color args={["white"]} attach="background" />
-        
+
         <Suspense fallback={null}>
-        <AnimatedPhotoOverlay photoUrl={photoOverlayUrl} startingScale={1.5} endingScale={0.6}/>
-        <AnimatedStickyOverlay/>
-        <FoodCart position={[60, -30, -250]} />
-        <PhotoSphere photoUrl={photoSphereUrl} position={[-10, 20, -140]}/>
+          <AnimatedPhotoOverlay
+            photoUrl={photoOverlayUrl}
+            startingScale={1.5}
+            endingScale={0.6}
+          />
+          <AnimatedStickyOverlay />
+          <FoodCart position={[60, -30, -250]} />
+          <PhotoSphere photoUrl={photoSphereUrl} position={[-10, 20, -140]} />
         </Suspense>
       </Canvas>
     </div>
