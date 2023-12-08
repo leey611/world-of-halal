@@ -73,17 +73,19 @@ body {
 
 .overlaySlide {
   position: absolute;
-  text-align: right;
+  text-align: left;
   right: 50px;
-  font-size: 35px;
+  font-size: 22px;
   color: black;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255, 0.6);
   width: 40vw;
   z-index: 50;
   padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 2cm, 2cm;
 }
 
-.plainTextSlide{
+.plainTextSlide {
   position: absolute;
   width: 60vw;
   left: 20vw;
@@ -92,7 +94,7 @@ body {
   z-index: 50;
 }
 
-.sticky-overlay{
+.sticky-overlay {
   position: absolute;
   top: 0;
   background-color: white;

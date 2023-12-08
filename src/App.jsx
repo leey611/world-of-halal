@@ -54,7 +54,7 @@ function App() {
         every day.{" "}
       </OverlaySlide>
 
-      <OverlaySlide viewportPosition={150}>
+      <OverlaySlide viewportPosition={130}>
         “Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear
         of his truck while a steady line forms in front. We visited him on a
         gusty Wednesday, during an off hour in the afternoon-- and yet, people
@@ -70,18 +70,47 @@ function App() {
         food truck into a beloved Brooklyn mainstay? Through spatial analysis,
         we break all the intricacies of a New York City halal cart.
       </OverlaySlide>
-      
+
       {/* Initial Cart Overview Here */}
-  
+
       <PlainTextSlide viewportPosition={700}>
-      Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where he lives with his family, and drives up to Red Hook by 7 am to retrieve his Halal Cart from the commissary garage. By 8 am, he parks in his usual spot on Brooklyn Bridge Restaurant and gets to work preparing fresh ingredients for the day. By 10 am, he’s ready for customers. <br/><br/>
-      When he used to work the cart alone, Ayman would work at the cart late into the evening. Now, he has an employee that comes in around 2 and works until 11, letting Ayman go home and eat dinner with his kids. <br/><br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where he
+        lives with his family, and drives up to Red Hook by 7 am to retrieve his
+        Halal Cart from the commissary garage. By 8 am, he parks in his usual
+        spot on Brooklyn Bridge Restaurant and gets to work preparing fresh
+        ingredients for the day. By 10 am, he’s ready for customers. <br />
+        <br />
+        When he used to work the cart alone, Ayman would work at the cart late
+        into the evening. Now, he has an employee that comes in around 2 and
+        works until 11, letting Ayman go home and eat dinner with his kids.{" "}
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        <br />
+        <br />
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+        voluptas nulla pariatur?
       </PlainTextSlide>
 
       <TitleSlide
-        viewportPosition={550}
+        viewportPosition={900}
         credits={"By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee"}
       >
         Hello from slide 5
