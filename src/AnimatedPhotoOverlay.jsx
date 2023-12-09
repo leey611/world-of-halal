@@ -27,7 +27,7 @@ function AnimatedPhotoOverlay(props){
   }, [loaded]);
   
   
-  return (<Html>
+  return (<Html calculatePosition={() => [0, 0, 0]}>
       <div className="photo-overlay">
         <img src={photoUrl} ref={imgRef} className="photo-overlay-img" onLoad={() => setLoaded(true)}></img>
       </div>
