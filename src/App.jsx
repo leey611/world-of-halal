@@ -54,21 +54,25 @@ function App() {
         every day.{" "}
       </OverlaySlide>
 
-      <OverlaySlide viewportPosition={120}>
-      “Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear of his truck while his employee cooks for customers inside. We visited him on a gusty Wednesday, on what he claimed would be an off-hour– still, though, people continued to line up at the window, drawn by the sizzle and aroma of fire-grilled meat.   
+      <OverlaySlide viewportPosition={130}>
+        “Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear
+        of his truck while his employee cooks for customers inside. We visited
+        him on a gusty Wednesday, on what he claimed would be an off-hour -
+        still, though, people continued to line up at the window, drawn by the
+        sizzle and aroma of fire-grilled meat. So what does it take to turn an
+        unassuming food truck into a beloved Brooklyn mainstay? Through spatial
+        analysis, we break all the intricacies of a New York City halal cart.
       </OverlaySlide>
 
-      <OverlaySlide viewportPosition={140}>
+      {/* Initial Cart Overview Here */}
+
+      <OverlaySlide viewportPosition={500}>
         Ayman’s cart is his pride and joy. He upgraded from his original cart in
         2013, pouring tens of thousands of dollars to deck the vehicle out in
         deep fryers, a spinning kebab wheel, and LED signs that border the roof.
         In it, he weathers intense lunch rushes, sweltering summers without AC,
-        and brutal, deserted winters. So what does it take to turn an unassuming
-        food truck into a beloved Brooklyn mainstay? Through spatial analysis,
-        we break all the intricacies of a New York City halal cart.
+        and brutal, deserted winters.
       </OverlaySlide>
-
-      {/* Initial Cart Overview Here */}
 
       <PlainTextSlide viewportPosition={700}>
         Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where he
