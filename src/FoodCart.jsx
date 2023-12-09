@@ -69,7 +69,7 @@ function FoodCart(props) {
     >
       <Marker
         position={[200, 4, 0]}
-        title=""
+        title="Generator"
         id="marker-1"
         startDuration={AnimationTimings.Camera2}
         startCameraMovement="camera-2"
@@ -81,12 +81,12 @@ function FoodCart(props) {
 
       <Marker
         position={[0, -300, 0]}
-        title=""
+        title="Flat Grill"
         id="marker-2"
         startDuration={AnimationTimings.Camera1}
         startCameraMovement="camera-1"
       >
-        The flat grill is where the magic happens-- chicken and lamb are diced,
+        Here's where the magic happens-- chicken and lamb are diced,
         seasoned, and grilled to perfection.
       </Marker>
     </primitive>

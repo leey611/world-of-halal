@@ -149,16 +149,18 @@ body {
 }
 
 .marker-div {
-  width: 300px;
+  width: 400px;
   height: fit-content;
-  background-color: rgba(0, 82, 169, 0.2);
+  background-color: rgba(213, 213, 213, 0.8);
   padding: 20px;
   opacity: 0;
 }
 
 .marker-title {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  margin-bottom: 5px;
+  color:rgb(236, 115, 54);
+  font-weight: bold;
 }
 
 .marker-body {
