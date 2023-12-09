@@ -8,6 +8,8 @@ import PlainTextSlide from "./PlainTextSlide";
 import { AnimationTimeline } from "./AnimationTimeline";
 
 import "./App.css";
+import OverlaySlideBlack from "./OverlaySlideBlack";
+import AymanCooking from "/images/ayman_cooking.jpg";
 
 function getScrollProgress() {
   const winScroll = window.document.documentElement.scrollTop;
@@ -66,13 +68,32 @@ function App() {
 
       {/* Initial Cart Overview Here */}
 
-      <OverlaySlide viewportPosition={500}>
-        Ayman’s cart is his pride and joy. He upgraded from his original cart in
-        2013, pouring tens of thousands of dollars to deck the vehicle out in
-        deep fryers, a spinning kebab wheel, and LED signs that border the roof.
-        In it, he weathers intense lunch rushes, sweltering summers without AC,
-        and brutal, deserted winters.
-      </OverlaySlide>
+      <div id="blackCard" viewportPosition={500}>
+        <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
+        <OverlaySlideBlack viewportPosition={20}>
+          <p id="blackParagraph">
+            Ayman’s cart is his pride and joy. He upgraded from his original
+            cart in 2013, pouring tens of thousands of dollars to deck the
+            vehicle out in deep fryers, a spinning kebab wheel, and LED signs
+            that border the roof. In it, he weathers intense lunch rushes,
+            sweltering summers without AC, and brutal, deserted winters.{" "}
+          </p>
+          <p>
+            Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where he
+            lives with his family, and drives up to Red Hook by 7 am to retrieve
+            his Halal Cart from the commissary garage. By 8 am, he parks in his
+            usual spot on Brooklyn Bridge Restaurant and gets to work preparing
+            fresh ingredients for the day. By 10 am, he’s ready for customers.
+          </p>
+          <p>
+            When he used to work the cart alone, Ayman would work at the cart
+            late into the evening. Now, he has an employee that comes in around
+            2 and works until 11, letting Ayman go home and eat dinner with his
+            kids.
+          </p>
+          “It’s not easy. It’s kind of like a lotto.”
+        </OverlaySlideBlack>
+      </div>
 
       <PlainTextSlide viewportPosition={700}>
         Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where he

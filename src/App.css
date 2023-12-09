@@ -86,6 +86,48 @@ body {
   box-shadow: 2cm, 2cm;
 }
 
+.overlaySlideBlack {
+  position: absolute;
+  text-align: left;
+  right: 60px;
+  font-size: 22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  width: 40vw;
+  z-index: 50;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 2cm, 2cm;
+}
+
+#blackCard {
+  position: absolute;
+  /* Adjust this value based on where you want the black card to start sticking */
+  top: 500vh;
+  width: 100vw;
+  height: 92vh; /* Adjust this value based on the desired height of the black card */
+  background-color: rgb(18, 18, 18);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#blackParagraph {
+  margin-block-start: -3em;
+}
+
+#cookingPhoto {
+  position: absolute;
+  max-width: 42em;
+  margin-left: 8em;
+  margin-right: 50em;
+  margin-top: 10.5em;
+  margin-bottom: 10em;
+}
+
 .plainTextSlide {
   position: absolute;
   width: 60vw;
