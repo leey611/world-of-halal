@@ -1,6 +1,6 @@
 import { useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 
 import AnimatedCamera from "./AnimatedCamera";
 import FoodCart from "./FoodCart";
@@ -12,13 +12,14 @@ const photoOverlayUrl = "/images/halal-photo-1.jpg";
 const photoSphereUrl = "/images/sphere_small.jpg";
 
 function Scene() {
+
   return (
     <div id="canvas_wrapper">
-      <Canvas>
+      <Canvas id="canvas">
         <Environment preset="night" />
 
         {/* Camera 🎥 */}
-        <AnimatedCamera />
+        <AnimatedCamera makeDefault/>
 
         {/* Lights 💡 */}
         <ambientLight intensity={0.8} />

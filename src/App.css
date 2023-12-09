@@ -122,3 +122,35 @@ body {
 .marker-body {
   font-size: 20px;
 }
+
+.drag-img-div{
+  position: absolute;
+  top: 48vh;
+  left: 48vw;
+  z-index: 1000000;
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 8px;
+  border-radius: 30%;
+  animation: blinking 1.5s infinite;
+}
+
+.drag-img{
+  width: 4vw;
+  height: auto;
+}
+
+.drag-img-container{
+  opacity: 0;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
