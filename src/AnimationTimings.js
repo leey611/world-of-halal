@@ -1,5 +1,5 @@
 export const AnimationTimings = {
-    Start: 280,
+    Start: 120,
     PhotoScale: 50,
     PhotoFade: 50,
     Camera1: 30,
@@ -7,7 +7,7 @@ export const AnimationTimings = {
     Camera3: 30,
     Camera4: 30,
     Camera5: 30, 
-    Wait1: 300,
+    Wait1: 460,
     FadeCartIn: 50, 
     ZoomInCart: 30,
     FadeSphereIn: 50,

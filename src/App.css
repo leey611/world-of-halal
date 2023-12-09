@@ -77,10 +77,11 @@ body {
   right: 50px;
   font-size: 22px;
   color: black;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 10px;
   width: 40vw;
   z-index: 50;
-  padding: 10px;
+  padding: 15px;
   font-family: "Times New Roman", Times, serif;
   box-shadow: 2cm, 2cm;
 }
