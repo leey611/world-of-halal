@@ -77,25 +77,13 @@ body {
   right: 50px;
   font-size: 22px;
   color: black;
-<<<<<<< Updated upstream
   background-color: rgb(255, 255, 255, 0.8);
   border-radius: 10px;
   width: 40vw;
   z-index: 50;
   padding: 15px;
-=======
-  background-color: rgb(255, 255, 255, 0.6);
-  width: 30vw;
-  z-index: 50;
-  padding: 25px;
->>>>>>> Stashed changes
   font-family: "Times New Roman", Times, serif;
   box-shadow: 2cm, 2cm;
-}
-
-.wideOverlaySlide {
-  width: 60vw;
-  text-align: center;
 }
 
 .plainTextSlide {
