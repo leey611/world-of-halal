@@ -45,7 +45,7 @@ function App() {
         subtitle={"How one man keeps Downtown Brooklyn fed"}
       ></TitleSlide>
 
-      <OverlaySlide viewportPosition={100}>
+      <OverlaySlide class="wideOverlaySlide" viewportPosition={100}>
         On the side of Brooklyn Bridge Boulevard, in the heart of downtown
         Brooklyn, you’ll find an establishment that has withstood the test of
         time. Ayman [Surname] has operated his halal cart King Halal Food since
@@ -54,11 +54,22 @@ function App() {
         every day.{" "}
       </OverlaySlide>
 
+<<<<<<< Updated upstream
       <OverlaySlide viewportPosition={120}>
       “Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear of his truck while his employee cooks for customers inside. We visited him on a gusty Wednesday, on what he claimed would be an off-hour– still, though, people continued to line up at the window, drawn by the sizzle and aroma of fire-grilled meat.   
       </OverlaySlide>
 
       <OverlaySlide viewportPosition={140}>
+=======
+      <OverlaySlide viewportPosition={140}>
+        “Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear
+        of his truck while a steady line forms in front. We visited him on a
+        gusty Wednesday, during an off hour in the afternoon-- and yet, people
+        kept lining up, drawn by the sizzle and aroma of fire-grilled meat.
+      </OverlaySlide>
+
+      <OverlaySlide viewportPosition={175}>
+>>>>>>> Stashed changes
         Ayman’s cart is his pride and joy. He upgraded from his original cart in
         2013, pouring tens of thousands of dollars to deck the vehicle out in
         deep fryers, a spinning kebab wheel, and LED signs that border the roof.
