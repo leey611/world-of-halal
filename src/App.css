@@ -150,7 +150,7 @@ body {
 .marker-div {
   width: 400px;
   height: fit-content;
-  background-color: rgba(213, 213, 213, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   opacity: 0;
 }
@@ -158,7 +158,7 @@ body {
 .marker-title {
   font-size: 25px;
   margin-bottom: 5px;
-  color:rgb(236, 115, 54);
+  color: rgb(255, 123, 57);
   font-weight: bold;
 }
 
@@ -166,7 +166,7 @@ body {
   font-size: 20px;
 }
 
-.drag-img-div{
+.drag-img-div {
   position: absolute;
   top: 48vh;
   left: 48vw;
@@ -177,12 +177,12 @@ body {
   animation: blinking 1.5s infinite;
 }
 
-.drag-img{
+.drag-img {
   width: 4vw;
   height: auto;
 }
 
-.drag-img-container{
+.drag-img-container {
   opacity: 0;
 }
 
