@@ -77,8 +77,23 @@ body {
   font-size: 22px;
   color: black;
   background-color: rgb(255, 255, 255, 0.8);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   width: 40vw;
+  z-index: 50;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 2cm, 2cm;
+}
+
+.overlaySlideCart {
+  position: absolute;
+  text-align: left;
+  left: 50px;
+  font-size: 18px;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.8);
+  /* border-radius: 10px; */
+  width: 25vw;
   z-index: 50;
   padding: 20px;
   font-family: "Times New Roman", Times, serif;
@@ -91,7 +106,7 @@ body {
   right: 60px;
   font-size: 22px;
   color: white;
-  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
   border-radius: 10px;
   width: 40vw;
   z-index: 50;
@@ -156,15 +171,15 @@ body {
 }
 
 .marker-title {
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 5px;
   color: rgb(255, 123, 57);
   font-weight: bold;
 }
 
-.marker-body {
+/* .marker-body {
   font-size: 20px;
-}
+} */
 
 .drag-img-div {
   position: absolute;

@@ -9,6 +9,7 @@ import { AnimationTimeline } from "./AnimationTimeline";
 
 import "./App.css";
 import OverlaySlideBlack from "./OverlaySlideBlack";
+import OverlaySlideCart from "./OverlaySlideCart";
 import AymanCooking from "/images/ayman_cooking.jpg";
 
 function getScrollProgress() {
@@ -67,6 +68,21 @@ function App() {
       </OverlaySlide>
 
       {/* Initial Cart Overview Here */}
+
+      <OverlaySlideCart viewportPosition={220} title="Grill" id="marker - 1">
+        Here's where the magic happens-- chicken and lamb are diced, seasoned,
+        and grilled to perfection.
+      </OverlaySlideCart>
+
+      <OverlaySlideCart
+        viewportPosition={310}
+        title="Generator"
+        id="marker - 1"
+      >
+        The heart of Ayman’s truck is a generator mounted to the back of the
+        cart. The generator runs all appliances in the truck, and also a freezer
+        in his family’s car, which he parks right behind it.
+      </OverlaySlideCart>
 
       <div id="blackCard" viewportPosition={500}>
         <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />

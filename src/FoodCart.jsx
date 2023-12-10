@@ -67,7 +67,7 @@ function FoodCart(props) {
       position={position}
       rotation={[-Math.PI / 2, 0, Math.PI]}
     >
-      <Marker
+      {/* <Marker
         position={[200, 4, 0]}
         title="Generator"
         id="marker-1"
@@ -88,7 +88,7 @@ function FoodCart(props) {
       >
         Here's where the magic happens-- chicken and lamb are diced,
         seasoned, and grilled to perfection.
-      </Marker>
+      </Marker> */}
     </primitive>
   );
 }
