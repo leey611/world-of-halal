@@ -89,7 +89,7 @@ body {
   position: absolute;
   text-align: left;
   left: 50px;
-  font-size: 18px;
+  font-size: 22px;
   color: black;
   background-color: rgb(255, 255, 255, 0.8);
   /* border-radius: 10px; */
@@ -171,7 +171,7 @@ body {
 }
 
 .marker-title {
-  font-size: 22px;
+  font-size: 25px;
   margin-bottom: 5px;
   color: rgb(255, 123, 57);
   font-weight: bold;
