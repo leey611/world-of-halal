@@ -18,69 +18,98 @@ function AnimatedCamera() {
     AnimationTimeline.to(
       cameraRef.current.position,
       {
+        x: -60,
+        y: -40,
+        z: -100,
+        duration: AnimationTimings.Camera1
+      },
+      "camera-1"
+    );
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait1}, "wait-1");
+
+    AnimationTimeline.to(
+      cameraRef.current.position,
+      {
         x: -10,
-        y: 20,
-        z: -140,
-        duration: AnimationTimings.Camera1
-      },
-      "camera-1"
-    );
-
-    AnimationTimeline.to(
-      cameraRef.current.rotation,
-      {
-        x: MathUtils.degToRad(-10),
-        y: MathUtils.degToRad(-20),
-        z: 0,
-        duration: AnimationTimings.Camera1
-      },
-      "camera-1"
-    );
-
-    AnimationTimeline.to(
-      cameraRef.current.rotation,
-      {
-        x: 0,
-        y: MathUtils.degToRad(20),
-        z: 0,
+        y: -35,
+        z: -100,
         duration: AnimationTimings.Camera2
       },
       "camera-2"
     );
 
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait2}, "wait-2");
+
     AnimationTimeline.to(
       cameraRef.current.position,
       {
         x: 0,
+        y: 70,
+        z: 0,
+        duration: AnimationTimings.Camera3
+      },
+      "camera-3"
+    );
+    AnimationTimeline.to(
+      cameraRef.current.rotation,
+      {
+        x: -0.4,
         y: 0,
         z: 0,
         duration: AnimationTimings.Camera3
       },
       "camera-3"
     );
-    
+
+    AnimationTimeline.to(
+      cameraRef.current.position,
+      {
+        x: -180,
+        y: 70,
+        z: -360,
+        duration: AnimationTimings.Camera4
+      },
+      "camera-4"
+    );
     AnimationTimeline.to(
       cameraRef.current.rotation,
       {
-        x: 0,
-        y: 0,
-        z: 0,
+        x: 0.4,
+        y: -2.35,
+        z: 0.4,
         duration: AnimationTimings.Camera4
       },
       "camera-4"
     );
     
-    AnimationTimeline.to(
-      cameraRef.current.rotation, {}, "camera-5");
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait3}, "wait-3");
 
-    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait1}, "wait-1");
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Camera5}, "camera-5");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait5}, "wait-5");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Camera6}, "camera-6");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait6}, "wait-6");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Camera7}, "camera-7");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait7}, "wait-7");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Camera8}, "camera-8");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait8}, "wait-8");
+
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.FadeCartOut}, "fade-cart-out");
+    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.WaitEnd}, "wait-end");
     AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.FadeCartIn}, "fade-cart-in");
 
     AnimationTimeline.to(
       cameraRef.current.position,
       {
         x: -10,
-        y: 20,
+        y: 0,
         z: -140,
         duration: AnimationTimings.ZoomInCart
       },

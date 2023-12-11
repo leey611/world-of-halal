@@ -69,13 +69,8 @@ function App() {
 
       {/* Initial Cart Overview Here */}
 
-      <OverlaySlideCart viewportPosition={220} title="Grill" id="marker - 1">
-        Here's where the magic happens-- chicken and lamb are diced, seasoned,
-        and grilled to perfection.
-      </OverlaySlideCart>
-
       <OverlaySlideCart
-        viewportPosition={310}
+        viewportPosition={220}
         title="Generator"
         id="marker - 1"
       >
@@ -84,9 +79,38 @@ function App() {
         in his family’s car, which he parks right behind it.
       </OverlaySlideCart>
 
-      <div id="blackCard" viewportPosition={500}>
+      <OverlaySlideCart viewportPosition={300} title="Drink Cooler" id="marker - 2">
+        Drink Cooler Text
+      </OverlaySlideCart>
+
+      {/* Pan up & Rotate 3/4 here */}
+
+      <OverlaySlideCart viewportPosition={380} title="LED Signs" id="marker - 3">
+        LED Signs Text
+      </OverlaySlideCart>
+
+        {/* Lift Walls Up */}
+
+      <OverlaySlideCart viewportPosition={480} title="Grill" id="marker - 4">
+        Here's where the magic happens-- chicken and lamb are diced, seasoned,
+        and grilled to perfection.
+      </OverlaySlideCart>
+
+      <OverlaySlideCart viewportPosition={560} title="Gyro Wheel" id="marker - 5">
+        Gyro Wheel Text
+      </OverlaySlideCart>
+
+      <OverlaySlideCart viewportPosition={640} title="Storage" id="marker - 6">
+        Storage Text
+      </OverlaySlideCart>
+
+      <OverlaySlideCart viewportPosition={720} title="Floor" id="marker - 7">
+        Floor Text
+      </OverlaySlideCart>
+
+      <div id="blackCard">
         <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
-        <OverlaySlideBlack viewportPosition={20}>
+        <OverlaySlideBlack>
           <p id="blackParagraph">
             Ayman’s cart is his pride and joy. He upgraded from his original
             cart in 2013, pouring tens of thousands of dollars to deck the
@@ -112,10 +136,9 @@ function App() {
       </div>
 
       <TitleSlide
-        viewportPosition={900}
+        viewportPosition={1150}
         credits={"By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee"}
       >
-        Hello from slide 5
       </TitleSlide>
 
       {/* 3D scene container */}

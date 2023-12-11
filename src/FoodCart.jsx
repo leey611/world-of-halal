@@ -7,7 +7,7 @@ import { AnimationTimings } from "./AnimationTimings";
 import WaitForElement from "./WaitForElement";
 import * as THREE from "three";
 
-const fbxUrl = "/models/halal-cart.fbx";
+const fbxUrl = "/models/halal-cart2.fbx";
 
 function Marker(props) {
   const { children, position, title, id, startDuration, startCameraMovement } =
@@ -65,30 +65,8 @@ function FoodCart(props) {
       ref={cartRef}
       object={model}
       position={position}
-      rotation={[-Math.PI / 2, 0, Math.PI]}
+      rotation={[-Math.PI / 2, 0.01, 0]}
     >
-      {/* <Marker
-        position={[200, 4, 0]}
-        title="Generator"
-        id="marker-1"
-        startDuration={AnimationTimings.Camera2}
-        startCameraMovement="camera-2"
-      >
-        The heart of Ayman’s truck is a generator mounted to the back of the
-        cart. The generator runs all appliances in the truck, and also a freezer
-        in his family’s car, which he parks right behind it.
-      </Marker>
-
-      <Marker
-        position={[0, -300, 0]}
-        title="Flat Grill"
-        id="marker-2"
-        startDuration={AnimationTimings.Camera1}
-        startCameraMovement="camera-1"
-      >
-        Here's where the magic happens-- chicken and lamb are diced,
-        seasoned, and grilled to perfection.
-      </Marker> */}
     </primitive>
   );
 }
