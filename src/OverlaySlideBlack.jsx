@@ -1,12 +1,8 @@
+// Change position in App.css
 function OverlaySlideBlack(props) {
-  const { children, viewportPosition } = props;
+  const { children } = props;
   return (
-    <div
-      className="overlaySlideBlack"
-      style={{
-        top: `${viewportPosition}vh`,
-      }}
-    >
+    <div className="overlaySlideBlack">
       {children}
     </div>
   );

@@ -69,13 +69,8 @@ function App() {
 
       {/* Initial Cart Overview Here */}
 
-      <OverlaySlideCart viewportPosition={220} title="Grill" id="marker - 1">
-        Here's where the magic happens-- chicken and lamb are diced, seasoned,
-        and grilled to perfection.
-      </OverlaySlideCart>
-
       <OverlaySlideCart
-        viewportPosition={310}
+        viewportPosition={220}
         title="Generator"
         id="marker - 1"
       >
@@ -84,9 +79,38 @@ function App() {
         in his family’s car, which he parks right behind it.
       </OverlaySlideCart>
 
-      <div id="blackCard" viewportPosition={500}>
+      <OverlaySlideCart viewportPosition={300} title="Drink Cooler" id="marker - 2">
+        At the front of the cart, customers can help themselves to an assortment of beverages. Ayman offers a deal for students specifically, who get a free drink when they order a plate or sandwich.
+      </OverlaySlideCart>
+
+      {/* Pan up & Rotate 3/4 here */}
+
+      <OverlaySlideCart viewportPosition={380} title="LED Signs" id="marker - 3">
+        Bright LED signs border two sides of the cart’s top. Together they cost thousands of dollars, but Ayman warns that they’re prone to malfunctioning. 
+      </OverlaySlideCart>
+
+        {/* Lift Walls Up */}
+
+      <OverlaySlideCart viewportPosition={460} title="Grill" id="marker - 4">
+        Where the magic happens-- chicken and lamb are diced, seasoned,
+        and grilled to perfection. <br/><br/>When asked what’s the best dish here, Ayman responds:  “Everything. No, seriously. But everybody likes the mixed chicken and lamb.”
+      </OverlaySlideCart>
+
+      <OverlaySlideCart viewportPosition={540} title="Gyro Wheel" id="marker - 5">
+        The kebab wheel is a special addition that allows Ayman to serve gyro dishes. Both chicken and lamb gyro sandwiches are offered on the menu. 
+      </OverlaySlideCart>
+
+      <OverlaySlideCart viewportPosition={620} title="Storage" id="marker - 6">
+        Storage compartments are nestled wherever there’s space. Bottles of sauces and industrial-sized spices line the back wall, while fresh toppings lie in bins to the side. Plenty of drawers fit underneath the counters. Ayman’s freezer in his personal car stores extra portions of meat. 
+      </OverlaySlideCart>
+
+      <OverlaySlideCart viewportPosition={700} title="Floor" id="marker - 7">
+        Ayman and his employee must navigate a tiny floor space -- around [X] square feet. While the space feels cramped, it ensures that everything is in reach. The stool in the corner provides relief during the slow moments, but Ayman says he usually sticks to standing.
+      </OverlaySlideCart>
+
+      <div id="blackCard">
         <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
-        <OverlaySlideBlack viewportPosition={20}>
+        <OverlaySlideBlack>
           <p id="blackParagraph">
             Ayman’s cart is his pride and joy. He upgraded from his original
             cart in 2013, pouring tens of thousands of dollars to deck the
@@ -112,10 +136,9 @@ function App() {
       </div>
 
       <TitleSlide
-        viewportPosition={900}
+        viewportPosition={1150}
         credits={"By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee"}
       >
-        Hello from slide 5
       </TitleSlide>
 
       {/* 3D scene container */}

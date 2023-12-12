@@ -9,7 +9,7 @@ body {
 #article_wrapper {
   position: relative;
   background-color: grey;
-  height: 1000vh; /* Length of the interactive scroll article */
+  height: 1200vh; /* Length of the interactive scroll article */
 }
 
 #canvas_wrapper {
@@ -94,7 +94,7 @@ body {
   left: 50px;
   font-size: 22px;
   color: black;
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(0, 0, 0, 0.12);
   /* border-radius: 10px; */
   width: 25vw;
   z-index: 50;
@@ -118,11 +118,11 @@ body {
 #blackCard {
   position: absolute;
   /* Adjust this value based on where you want the black card to start sticking */
-  top: 500vh;
+  top: 800vh;
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
-  height: 92vh; /* Adjust this value based on the desired height of the black card */
+  height: 120vh; /* Adjust this value based on the desired height of the black card */
   background-color: rgb(18, 18, 18);
   color: white;
   display: flex;
