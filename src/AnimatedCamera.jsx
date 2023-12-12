@@ -97,12 +97,42 @@ function AnimatedCamera() {
 
     AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait7}, "wait-7");
 
-    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Camera8}, "camera-8");
+    AnimationTimeline.to(
+      cameraRef.current.position, 
+      {
+        x: 20,
+        y: 200,
+        z: -210,
+        duration: AnimationTimings.Camera8
+      }, "camera-8");
+    AnimationTimeline.to(
+      cameraRef.current.rotation, 
+      {
+        x: Math.PI/2,
+        y: -Math.PI,
+        z: 0,
+        duration: AnimationTimings.Camera8
+      }, "camera-8");
 
     AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.Wait8}, "wait-8");
 
-    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.FadeCartOut}, "fade-cart-out");
-    AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.WaitEnd}, "wait-end");
+    AnimationTimeline.to(
+      cameraRef.current.position, 
+      {
+        x: 0, 
+        y: 0,
+        z: 0,
+        duration: AnimationTimings.WaitEnd
+      }, "wait-end");
+    AnimationTimeline.to(
+        cameraRef.current.rotation, 
+        {
+          x: 0, 
+          y: 0,
+          z: 0,
+          duration: AnimationTimings.WaitEnd
+        }, "wait-end");
+
     AnimationTimeline.to(cameraRef.current.position, {duration: AnimationTimings.FadeCartIn}, "fade-cart-in");
 
     AnimationTimeline.to(
