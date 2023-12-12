@@ -7,7 +7,7 @@ import { AnimationTimings } from "./AnimationTimings";
 import WaitForElement from "./WaitForElement";
 import * as THREE from "three";
 
-const fbxUrl = "/models/halal-cart2.fbx";
+const fbxUrl = `${import.meta.env.BASE_URL}/models/halal-cart2.fbx`;
 
 function Marker(props) {
   const { children, position, title, id, startDuration, startCameraMovement } =

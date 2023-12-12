@@ -9,7 +9,7 @@ import WaitForElement from "./WaitForElement";
 
 const photoScale = 20;
 const rotationSpeed = 0.001;
-const dragImgUrl = "/images/drag.png";
+const dragImgUrl = `${import.meta.env.BASE_URL}/images/drag.png`;
 
 function PhotoSphere(props) {
   const { children, photoUrl, position } = props;

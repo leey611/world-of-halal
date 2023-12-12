@@ -8,8 +8,8 @@ import PhotoSphere from "./PhotoSphere";
 import AnimatedPhotoOverlay from "./AnimatedPhotoOverlay";
 import AnimatedStickyOverlay from "./AnimatedStickyOverlay";
 
-const photoOverlayUrl = "/images/halal-photo-1.jpg";
-const photoSphereUrl = "/images/sphere_small.jpg";
+const photoOverlayUrl = `${import.meta.env.BASE_URL}/images/halal-photo-1.jpg`;
+const photoSphereUrl = `${import.meta.env.BASE_URL}/images/sphere_small.jpg`;
 
 function Scene() {
 
