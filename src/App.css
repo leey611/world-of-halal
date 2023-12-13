@@ -198,10 +198,10 @@ a {
   z-index: 1;
 }
 
-.marker-div {
+.sphere-marker {
   width: 400px;
   height: fit-content;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 0, 0, 0.8);
   padding: 20px;
   opacity: 0;
 }
@@ -249,6 +249,10 @@ a {
 .drag-img-container {
   opacity: 0;
   -webkit-user-drag: none;
+}
+
+#scrollArrow{
+  animation: blinking 2s infinite;
 }
 
 @keyframes blinking {
