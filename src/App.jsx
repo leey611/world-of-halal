@@ -173,7 +173,7 @@ function App() {
               sweltering summers without AC, and brutal, deserted winters. It’s
               not easy to hack it as a food truck owner in New York City– Ayman
               compares the process of just getting a permit to the lottery.
-              Afterwards, food truck owners must follow guidelines that often
+              Afterwards, food truck owners must follow <a href="https://www.nyc.gov/assets/doh/downloads/pdf/rii/regulations-for-mobile-food-vendors.pdf">regulations</a> that often
               seem tedious and arcane, like having to set up their unit 6-12
               inches from the curb, at least 20 feet from a building’s entrance.
             </p>
@@ -228,12 +228,12 @@ function App() {
           top: `975vh`,
         }}
       >
-        Scroll down to see Ayman's Cart in 360° ↓
+        Scroll down to see Ayman's Cart in 360° <span id="scrollArrow">↓</span>
       </div>
       <TitleSlide
         viewportPosition={1180}
         credits={
-          "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, @2023"
+          "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, ©2023"
         }
       ></TitleSlide>
 
