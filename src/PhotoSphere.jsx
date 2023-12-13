@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { BackSide } from "three";
 import { AnimationTimeline } from "./AnimationTimeline";
 import { AnimationTimings } from "./AnimationTimings";
-import { useGesture } from "react-use-gesture";
+import { useGesture, useDrag } from "react-use-gesture";
 import WaitForElement from "./WaitForElement";
 
 const photoScale = 20;
@@ -19,17 +19,18 @@ function PhotoSphere(props) {
   const [ rotationX, setRotationX ] = useState(0);
   const [ rotationY, setRotationY ] = useState(0);
   const [ hasDragged, setHasDragged ] = useState(false)
-  const bind = useGesture({
-    onDrag: (e) => { 
-      if (!hasDragged){
-        setHasDragged(true);
-        document.getElementsByClassName("drag-img-container")[0].style.display = "none";
-      }
-      console.log(e)
-      setRotationX(e.movement[1]); 
-      setRotationY(e.movement[0]);
-     }
-  })
+
+  const bind = useDrag((e) => {
+    if (!hasDragged){
+      setHasDragged(true);
+      document.getElementsByClassName("drag-img-container")[0].style.display = "none";
+    }
+    setRotationX(e.offset[1]); 
+    setRotationY(e.offset[0]);
+  }, {
+    preventDefault: true,
+    filterTaps: true
+  });
 
   useEffect(() => {
     AnimationTimeline.to(meshRef.current, {opacity: 1, duration: AnimationTimings.FadeSphereIn}, "fade-sphere-in"); 
@@ -52,10 +53,10 @@ function PhotoSphere(props) {
   });
 
   return (
-    <mesh position={position} rotation={[0.2 + (rotationX / 200), 3.1 + (rotationY / 200), 0]} scale={photoScale} ref={sphereRef} {...bind()}>
+    <mesh position={position} rotation={[0.2 - (rotationX / 200), 3.1 - (rotationY / 200), 0]} scale={photoScale} ref={sphereRef} {...bind()}>
         <sphereGeometry/>
         <meshStandardMaterial ref={meshRef} map={texture} side={BackSide} transparent={true} opacity={0}/>
-        <Html calculatePosition={() => [0, 0, 0]}><div className="drag-img-container">
+        <Html calculatePosition={() => [0, 0, 0]}><div className="drag-img-container" onmousedown="event.preventDefault()">
           <div className="drag-img-div"> <img className="drag-img" src={dragImgUrl} /> </div>
           </div>
         </Html>

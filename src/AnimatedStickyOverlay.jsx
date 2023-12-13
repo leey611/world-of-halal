@@ -7,7 +7,11 @@ import WaitForElement from "./WaitForElement";
 function AnimatedStickyOverlay(props){
     useEffect(() => {
         WaitForElement(".sticky-overlay").then((elm) => {
-            AnimationTimeline.to(".sticky-overlay", {opacity: 1, duration: AnimationTimings.WaitEnd}, "wait-end"); 
+            AnimationTimeline.to(".sticky-overlay", {opacity: 1, duration: AnimationTimings.FadeCartOut}, "fade-cart-out"); 
+          });
+
+        WaitForElement(".sticky-overlay").then((elm) => {
+            AnimationTimeline.to(".sticky-overlay", {duration: AnimationTimings.WaitEnd}, "wait-end"); 
           });
 
         WaitForElement(".sticky-overlay").then((elm) => {
@@ -17,7 +21,7 @@ function AnimatedStickyOverlay(props){
         return () => AnimationTimeline.kill();
       }, []);
 
-    return  <Html zIndexRange={[167, 0]}><div className="sticky-overlay"></div></Html>
+    return  <Html zIndexRange={[167, 0]} calculatePosition={() => [0, 0, 0]}><div className="sticky-overlay"></div></Html>
 }
 
 export default AnimatedStickyOverlay;

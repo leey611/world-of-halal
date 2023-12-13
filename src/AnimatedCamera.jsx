@@ -215,6 +215,12 @@ function AnimatedCamera() {
 
     AnimationTimeline.to(
       cameraRef.current.position,
+      { duration: AnimationTimings.FadeCartOut },
+      "fade-cart-out"
+    );
+
+    AnimationTimeline.to(
+      cameraRef.current.position,
       {
         x: 0,
         y: 0,

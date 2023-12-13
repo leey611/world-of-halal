@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Scene from "./Scene";
 import OverlaySlide from "./OverlaySlide";
 import TitleSlide from "./TitleSlide";
-import PlainTextSlide from "./PlainTextSlide";
 
 import { AnimationTimeline } from "./AnimationTimeline";
 
@@ -168,6 +167,13 @@ function App() {
         </OverlaySlideBlack>
       </div>
 
+      <div className="scrollPrompt"
+        style={{
+          top: `975vh`,
+        }}
+      >
+        Scroll down to see Ayman's Cart in 360° ↓
+      </div>
       <TitleSlide
         viewportPosition={1175}
         credits={

@@ -17,7 +17,8 @@ export const AnimationTimings = {
   Wait7: 50,
   Camera8: 30, //floor, 670
   Wait8: 100, //770
-  WaitEnd: 300, //1070
+  FadeCartOut: 50,
+  WaitEnd: 250, //1070
   FadeCartIn: 50,
   ZoomInCart: 30,
   FadeSphereIn: 50, //1200
