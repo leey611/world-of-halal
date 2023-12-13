@@ -148,17 +148,17 @@ function App() {
                 starts preparing fresh ingredients for the day. By 10, he’s
                 ready for customers.
               </p>
-              <p>
-                When he used to run the cart by himself, Ayman would work late
-                into the evening, cooking a quick meal with what he already had
-                in the cart when he got a spare moment. Now, he has an employee
-                that comes in around 2 and works until 11, so Ayman can bring
-                dinner home and eat with his kids. He says they like the gyro
-                sandwich the most.
-              </p>
             </div>
           </div>
           <div id="blackCardBottomParagraph">
+            <p>
+              When he used to run the cart by himself, Ayman would work late
+              into the evening, cooking a quick meal with what he already had in
+              the cart when he got a spare moment. Now, he has an employee that
+              comes in around 2 and works until 11, so Ayman can bring dinner
+              home and eat with his kids. He says they like the gyro sandwich
+              the most.
+            </p>
             <p>
               This is actually Ayman’s second cart, which he upgraded from his
               original in 2013. In it, he weathers intense lunch rushes,
