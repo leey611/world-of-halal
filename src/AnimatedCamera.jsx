@@ -83,11 +83,11 @@ function AnimatedCamera() {
     );
 
     AnimationTimeline.to(
-      //LED Sign
+      //LED
       cameraRef.current.position,
       {
-        x: -180,
-        y: 70,
+        x: -170,
+        y: 65,
         z: -360,
         duration: AnimationTimings.Camera4,
       },
@@ -96,8 +96,8 @@ function AnimatedCamera() {
     AnimationTimeline.to(
       cameraRef.current.rotation,
       {
-        x: 0.45,
-        y: -2.35,
+        x: 0.52,
+        y: -2.38,
         z: 0.4,
         duration: AnimationTimings.Camera4,
       },
@@ -115,8 +115,8 @@ function AnimatedCamera() {
       cameraRef.current.position,
       {
         x: 8,
-        y: 13,
-        z: -240,
+        y: 2,
+        z: -235,
         duration: AnimationTimings.Camera5,
       },
       "camera-5"
