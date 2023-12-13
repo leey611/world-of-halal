@@ -251,7 +251,7 @@ function AnimatedCamera() {
       {
         x: -10,
         y: 0,
-        z: -140,
+        z: -200,
         duration: AnimationTimings.ZoomInCart,
       },
       "zoom-in-cart"

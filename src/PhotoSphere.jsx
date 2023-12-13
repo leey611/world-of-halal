@@ -1,10 +1,10 @@
 import { useRef, useEffect, useState } from "react";
-import { Sphere, useTexture, Html } from "@react-three/drei";
+import { useTexture, Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { BackSide } from "three";
 import { AnimationTimeline } from "./AnimationTimeline";
 import { AnimationTimings } from "./AnimationTimings";
-import { useGesture, useDrag } from "react-use-gesture";
+import { useDrag } from "react-use-gesture";
 import WaitForElement from "./WaitForElement";
 
 const photoScale = 20;
@@ -41,6 +41,12 @@ function PhotoSphere(props) {
         { opacity: 1, duration: AnimationTimings.FadeSphereIn },
         "fade-sphere-in"
       );
+
+      document.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.dropEffect = 'none'
+      });
     });
 
     return () => AnimationTimeline.kill();
@@ -56,8 +62,8 @@ function PhotoSphere(props) {
     <mesh position={position} rotation={[0.2 - (rotationX / 200), 3.1 - (rotationY / 200), 0]} scale={photoScale} ref={sphereRef} {...bind()}>
         <sphereGeometry/>
         <meshStandardMaterial ref={meshRef} map={texture} side={BackSide} transparent={true} opacity={0}/>
-        <Html calculatePosition={() => [0, 0, 0]}><div className="drag-img-container" onmousedown="event.preventDefault()">
-          <div className="drag-img-div"> <img className="drag-img" src={dragImgUrl} /> </div>
+        <Html calculatePosition={() => [0, 0, 0]}><div className="drag-img-container">
+          <div className="drag-img-div"> <img id="drag-img" className="drag-img" src={dragImgUrl} /> </div>
           </div>
         </Html>
       {children}

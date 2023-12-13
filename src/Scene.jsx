@@ -36,7 +36,7 @@ function Scene() {
           />
           <AnimatedStickyOverlay/>
           <FoodCart position={[-52, -54, -182]} />
-          <PhotoSphere photoUrl={photoSphereUrl} position={[-10, 0, -140]} />
+          <PhotoSphere photoUrl={photoSphereUrl} position={[-10, 0, -200]} />
         </Suspense>
       </Canvas>
     </div>
