@@ -163,8 +163,10 @@ function App() {
       </div>
 
       <TitleSlide
-        viewportPosition={1150}
-        credits={"By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee"}
+        viewportPosition={1175}
+        credits={
+          "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, @2023"
+        }
       ></TitleSlide>
 
       {/* 3D scene container */}
