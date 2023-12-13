@@ -11,6 +11,7 @@ import OverlaySlideBlack from "./OverlaySlideBlack";
 import OverlaySlideCart from "./OverlaySlideCart";
 import AymanCooking from "/images/ayman_cooking.jpg";
 import FoodPicture from "/images/cart_food.jpg";
+import CashPicture from "/images/cash_only.jpg";
 
 function getScrollProgress() {
   const winScroll = window.document.documentElement.scrollTop;
@@ -137,28 +138,35 @@ function App() {
 
       <div id="blackCard">
         <OverlaySlideBlack>
-          <div id="blackCardTop">
-            <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
-            <div id="blackCardTopParagraph">
-              <p>
-                Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn,
-                where he lives with his family, and drives up to the commissary
-                garage in Red Hook at 7 am to retrieve his Halal cart. By 8 am,
-                he’s parked in his usual spot on Brooklyn Bridge Boulevard and
-                starts preparing fresh ingredients for the day. By 10, he’s
-                ready for customers.
-              </p>
-            </div>
-          </div>
+          {/* <div id="blackCardTop"> */}
+
+          {/* </div> */}
           <div id="blackCardBottomParagraph">
+            <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
+
             <p>
-              When he used to run the cart by himself, Ayman would work late
-              into the evening, cooking a quick meal with what he already had in
-              the cart when he got a spare moment. Now, he has an employee that
-              comes in around 2 and works until 11, so Ayman can bring dinner
-              home and eat with his kids. He says they like the gyro sandwich
-              the most.
+              Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where
+              he lives with his family, and drives up to the commissary garage
+              in Red Hook at 7 am to retrieve his Halal cart. By 8 am, he’s
+              parked in his usual spot on Brooklyn Bridge Boulevard and starts
+              preparing fresh ingredients for the day. By 10, he’s ready for
+              customers.
             </p>
+            <div id="blackCardPhotoParagraph">
+              <p>
+                When he used to run the cart by himself, Ayman would work late
+                into the evening, cooking a quick meal with what he already had
+                in the cart when he got a spare moment. Now, he has an employee
+                that comes in around 2 and works until 11, so Ayman can bring
+                dinner home and eat with his kids. He says they like the gyro
+                sandwich the most.
+              </p>
+              <img
+                id="cashPhoto"
+                src={CashPicture}
+                alt="Ayman's cart: Cash Only"
+              />
+            </div>
             <p>
               This is actually Ayman’s second cart, which he upgraded from his
               original in 2013. In it, he weathers intense lunch rushes,
@@ -223,7 +231,7 @@ function App() {
         Scroll down to see Ayman's Cart in 360° ↓
       </div>
       <TitleSlide
-        viewportPosition={1175}
+        viewportPosition={1180}
         credits={
           "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, @2023"
         }
