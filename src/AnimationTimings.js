@@ -13,8 +13,8 @@ export const AnimationTimings = {
   Wait5: 50,
   Camera6: 30, //gyro, 510
   Wait6: 50,
-  Camera7: 30, //storage
-  Wait7: 50,
+  Camera7: 40, //storage
+  Wait7: 40,
   Camera8: 30, //floor, 670
   Wait8: 100, //770
   FadeCartOut: 50,

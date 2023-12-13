@@ -154,7 +154,7 @@ body {
   width: 850px;
   max-width: 100%;
   /* margin-right: 20px; */
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
   align-items: flex-end;
   margin-left: 0;
@@ -264,7 +264,7 @@ a {
   -webkit-user-drag: none;
 }
 
-#scrollArrow{
+#scrollArrow {
   animation: blinking 2s infinite;
 }
 

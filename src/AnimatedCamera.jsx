@@ -140,8 +140,16 @@ function AnimatedCamera() {
     );
 
     AnimationTimeline.to(
+      //gyro wheel
       cameraRef.current.position,
-      { duration: AnimationTimings.Camera6 },
+      { x: 6, y: 8, z: -228, duration: AnimationTimings.Camera6 },
+      "camera-6"
+    );
+
+    AnimationTimeline.to(
+      //gyro wheel
+      cameraRef.current.rotation,
+      { x: 0.3, y: -4, z: -0.19, duration: AnimationTimings.Camera6 },
       "camera-6"
     );
 
@@ -152,8 +160,16 @@ function AnimatedCamera() {
     );
 
     AnimationTimeline.to(
+      //storage
       cameraRef.current.position,
-      { duration: AnimationTimings.Camera7 },
+      { x: -2, y: 12, z: -289, duration: AnimationTimings.Camera7 },
+      "camera-7"
+    );
+
+    AnimationTimeline.to(
+      //storage
+      cameraRef.current.rotation,
+      { x: 0.34, y: -3.2, z: 0, duration: AnimationTimings.Camera7 },
       "camera-7"
     );
 
@@ -187,6 +203,7 @@ function AnimatedCamera() {
     // );
 
     AnimationTimeline.to(
+      //floor
       cameraRef.current.position,
       {
         x: 20,
@@ -251,7 +268,7 @@ function AnimatedCamera() {
       {
         x: -10,
         y: 0,
-        z: -200,
+        z: -191,
         duration: AnimationTimings.ZoomInCart,
       },
       "zoom-in-cart"
