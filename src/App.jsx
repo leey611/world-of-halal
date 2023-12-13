@@ -10,6 +10,7 @@ import "./App.css";
 import OverlaySlideBlack from "./OverlaySlideBlack";
 import OverlaySlideCart from "./OverlaySlideCart";
 import AymanCooking from "/images/ayman_cooking.jpg";
+import FoodPicture from "/images/cart_food.jpg";
 
 function getScrollProgress() {
   const winScroll = window.document.documentElement.scrollTop;
@@ -128,46 +129,93 @@ function App() {
       </OverlaySlideCart>
 
       <OverlaySlideCart viewportPosition={700} title="Floor" id="marker - 7">
-        Ayman and his employee must navigate a tiny floor space -- around 28 square feet. While the space feels cramped, it ensures that everything is in reach. The stool in the corner provides relief during the slow moments, but Ayman says he usually sticks to standing.
+        Ayman and his employee must navigate a tiny floor space -- around 28
+        square feet. While the space feels cramped, it ensures that everything
+        is in reach. The stool in the corner provides relief during the slow
+        moments, but Ayman says he usually sticks to standing.
       </OverlaySlideCart>
 
       <div id="blackCard">
-      <OverlaySlideBlack>
-        <div id="blackCardTop">
-         <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
-          <div id="blackCardTopParagraph">
-          <p>
-          Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn, where he lives with his family, and drives up to the commissary garage in Red Hook at 7 am to retrieve his Halal cart. By 8 am, he’s parked in his usual spot on Brooklyn Bridge Boulevard and starts preparing fresh ingredients for the day. By 10, he’s ready for customers. 
-          </p>
-          <p>
-          When he used to run the cart by himself, Ayman would work late into the evening, cooking a quick meal with what he already had in the cart when he got a spare moment. Now, he has an employee that comes in around 2 and works until 11, so Ayman can bring dinner home and eat with his kids. He says they like the gyro sandwich the most.
-          </p>
+        <OverlaySlideBlack>
+          <div id="blackCardTop">
+            <img id="cookingPhoto" src={AymanCooking} alt="Ayman Cooking" />
+            <div id="blackCardTopParagraph">
+              <p>
+                Ayman’s day starts early-- he wakes in Bay Ridge, Brooklyn,
+                where he lives with his family, and drives up to the commissary
+                garage in Red Hook at 7 am to retrieve his Halal cart. By 8 am,
+                he’s parked in his usual spot on Brooklyn Bridge Boulevard and
+                starts preparing fresh ingredients for the day. By 10, he’s
+                ready for customers.
+              </p>
+              <p>
+                When he used to run the cart by himself, Ayman would work late
+                into the evening, cooking a quick meal with what he already had
+                in the cart when he got a spare moment. Now, he has an employee
+                that comes in around 2 and works until 11, so Ayman can bring
+                dinner home and eat with his kids. He says they like the gyro
+                sandwich the most.
+              </p>
+            </div>
           </div>
-        </div>
-        <div id="blackCardBottomParagraph">
-        <p>
-        This is actually Ayman’s second cart, which he upgraded from his original in 2013. In it, he weathers intense lunch rushes, sweltering summers without AC, and brutal, deserted winters. It’s not easy to hack it as a food truck owner in New York City– Ayman compares the process of just getting a permit to the lottery. Afterwards, food truck owners must follow guidelines that often seem tedious and arcane, like having to set up their unit 6-12 inches from the curb, at least 20 feet from a building’s entrance. 
-        </p>
-        <p>
-        Worse still, in the aftermath of the COVID-19 Pandemic, Ayman has seen a decline in business of hundreds of dollars a day. While a rise in hybrid and at-home work seems like an obvious culprit, Ayman also attributes it to a rising prevalence of in-app ordering. 
-        </p>
-        <p>
-        “People now are lazy, not the same as before,” he says. “Before, people can stay half an hour on line. But now… every customer stays in the office, [they] get into the app and order, and [they] just go into the store to pick up and go back.”
-        </p>
-        <p>
-        Ayman says he struggles with technology, and running the business is already keeping his hands more than full. But not getting on these apps now come with significant disadvantages, which may only grow in the coming years. According to <a href="https://www.businessofapps.com/data/food-delivery-app-market/">Business of Apps</a>, Food Order & Delivery Apps earned $17.1 billion in revenue in the U.S. in 2022, with the global industry projected to grow to $165 billion by 2029. It’s a unique new factor, accelerated by the pandemic, that will thrust many in the industry into uncertain waters.
-        </p>
-        <p>
-        For now, however, Ayman is content to run his halal cart just like he has for the past 23 years. Even as the food cart industry has changed, and more carts have cropped up in nearby spots, Ayman says he doesn’t see it as competition. 
-        </p>
-        <p>
-        “A street is a street. Many people sell different foods. You see, there's a wagon here, wagon there, another wagon down the block. The customer knows which food is good.”
-        </p>
-        </div>
+          <div id="blackCardBottomParagraph">
+            <p>
+              This is actually Ayman’s second cart, which he upgraded from his
+              original in 2013. In it, he weathers intense lunch rushes,
+              sweltering summers without AC, and brutal, deserted winters. It’s
+              not easy to hack it as a food truck owner in New York City– Ayman
+              compares the process of just getting a permit to the lottery.
+              Afterwards, food truck owners must follow guidelines that often
+              seem tedious and arcane, like having to set up their unit 6-12
+              inches from the curb, at least 20 feet from a building’s entrance.
+            </p>
+            <p>
+              Worse still, in the aftermath of the COVID-19 Pandemic, Ayman has
+              seen a decline in business of hundreds of dollars a day. While a
+              rise in hybrid and at-home work seems like an obvious culprit,
+              Ayman also attributes it to a rising prevalence of in-app
+              ordering.
+            </p>
+            <p>
+              “People now are lazy, not the same as before,” he says. “Before,
+              people can stay half an hour on line. But now… every customer
+              stays in the office, [they] get into the app and order, and [they]
+              just go into the store to pick up and go back.”
+            </p>
+            <div id="blackCardPhotoParagraph">
+              <img id="foodPhoto" src={FoodPicture} alt="Food in the cart" />
+              <p>
+                Ayman says he struggles with technology, and running the
+                business is already keeping his hands more than full. But not
+                getting on these apps now come with significant disadvantages,
+                which may only grow in the coming years. According to{" "}
+                <a href="https://www.businessofapps.com/data/food-delivery-app-market/">
+                  Business of Apps
+                </a>
+                , Food Order & Delivery Apps earned $17.1 billion in revenue in
+                the U.S. in 2022, with the global industry projected to grow to
+                $165 billion by 2029. It’s a unique new factor, accelerated by
+                the pandemic, that will thrust many in the industry into
+                uncertain waters.
+              </p>
+            </div>
+            <p>
+              For now, however, Ayman is content to run his halal cart just like
+              he has for the past 23 years. Even as the food cart industry has
+              changed, and more carts have cropped up in nearby spots, Ayman
+              says he doesn’t see it as competition.
+            </p>
+            <p>
+              “A street is a street. Many people sell different foods. You see,
+              there's a wagon here, wagon there, another wagon down the block.
+              The customer knows which food is good.”
+            </p>
+          </div>
         </OverlaySlideBlack>
       </div>
 
-      <div className="scrollPrompt"
+      <div
+        className="scrollPrompt"
         style={{
           top: `975vh`,
         }}

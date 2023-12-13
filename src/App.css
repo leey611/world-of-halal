@@ -91,7 +91,7 @@ body {
   width: 40vw;
   z-index: 50;
   padding: 20px;
-  font-family: 'Hedvig Letters Serif', serif, "Times New Roman", Times, serif;
+  font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
   box-shadow: 2cm, 2cm;
 }
 
@@ -106,10 +106,9 @@ body {
   width: 25vw;
   z-index: 50;
   padding: 20px;
-  font-family: 'Hedvig Letters Serif', serif, "Times New Roman", Times, serif;
+  font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
   box-shadow: 2cm, 2cm;
 }
-
 
 .overlaySlideBlack {
   width: 65%;
@@ -118,7 +117,7 @@ body {
   border-radius: 10px;
   z-index: 50;
   padding: 1.5rem;
-  font-family: 'Hedvig Letters Serif', serif, "Times New Roman", Times, serif;
+  font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,13 +136,15 @@ body {
   color: white;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
 
-#blackCardTop{
+#blackCardTop {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 2rem;
   justify-content: space-evenly;
 }
 
@@ -153,6 +154,7 @@ body {
   width: 600px;
   max-width: 100%;
   margin-right: 20px;
+  padding-top: 2rem;
   /* position: absolute;
   max-width: 42em;
   margin-left: 8em;
@@ -161,8 +163,23 @@ body {
   margin-bottom: 10em; */
 }
 
-#blackCardBottomParagraph{
+#foodPhoto {
+  display: block;
+  padding-right: 2rem;
+  width: 500px;
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+#blackCardBottomParagraph {
   width: 90%;
+}
+
+#blackCardPhotoParagraph {
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  /* align-items: ; */
 }
 
 a {
@@ -199,13 +216,13 @@ a {
   font-size: 20px;
 } */
 
-.scrollPrompt{
+.scrollPrompt {
   background-color: rgb(0, 0, 0, 0.12);
   width: fit-content;
   text-align: center;
   z-index: 50;
   padding: 20px;
-  font-family: 'Hedvig Letters Serif', serif, "Times New Roman", Times, serif;
+  font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
   box-shadow: 2cm, 2cm;
   position: absolute;
   font-size: 22px;
@@ -246,5 +263,5 @@ a {
 }
 
 .credits {
-  font-family: 'Hedvig Letters Serif', serif;
+  font-family: "Hedvig Letters Serif", serif;
 }
