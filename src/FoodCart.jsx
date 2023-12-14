@@ -180,32 +180,29 @@ function FoodCart(props) {
       "camera-2"
     );
 
-    for (let i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++) {
-      const children = drinkCoolerDoorLeftRef.current.children[i];
-      for (let j = 0; j < children.children.length; j++) {
-        const child = children.children[j];
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 0, duration: AnimationTimings.Camera2 },
-          "camera-2"
-        );
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 0.4, duration: AnimationTimings.Camera2 },
-          "camera-2"
-        );
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 0, duration: AnimationTimings.Camera2 },
-          "camera-2"
-        );
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 0.4, duration: AnimationTimings.Camera2 },
-          "camera-2"
-        );
-      }
-    }
+    //console.log(drinkCoolerDoorLeftRef.current.children[0]);
+    //console.log(drinkCoolerDoorRightRef.current);
+    AnimationTimeline.to(
+      drinkCoolerDoorLeftRef.current.children[0].children[0].material,
+      { opacity: 0, duration: AnimationTimings.Camera2 },
+      "camera-2"
+    );
+    AnimationTimeline.to(
+      drinkCoolerDoorLeftHighlightRef.current.children[0].children[0].material,
+      { opacity: 1, duration: AnimationTimings.Camera2 },
+      "camera-2"
+    );
+
+    AnimationTimeline.to(
+      drinkCoolerDoorRightRef.current.children[0].children[1].material,
+      { opacity: 0, duration: AnimationTimings.Camera2 },
+      "camera-2"
+    );
+    AnimationTimeline.to(
+      drinkCoolerDoorRightHighlightRef.current.children[0].children[1].material,
+      { opacity: 1, duration: AnimationTimings.Camera2 },
+      "camera-2"
+    );
 
     for (
       var i = 0;
@@ -236,45 +233,28 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera4 },
       "camera-4"
     );
-    for (var i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++) {
-      const children = drinkCoolerDoorLeftRef.current.children[i].children;
-      for (let j = 0; j < children.length; j++) {
-        const child = children[j];
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 1, duration: AnimationTimings.Camera4 },
-          "camera-4"
-        );
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 0, duration: AnimationTimings.Camera4 },
-          "camera-4"
-        );
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 1, duration: AnimationTimings.Camera4 },
-          "camera-4"
-        );
-        AnimationTimeline.to(
-          child.material,
-          { opacity: 0, duration: AnimationTimings.Camera4 },
-          "camera-4"
-        );
-      }
-    }
-    for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++) {
-      AnimationTimeline.to(
-        ledPanelRef.current.children[0].children[i].material,
-        { opacity: 0, duration: AnimationTimings.Camera4 },
-        "camera-4"
-      );
-      AnimationTimeline.to(
-        ledPanelHighlightRef.current.children[0].children[i].material,
-        { opacity: 1, duration: AnimationTimings.Camera4 },
-        "camera-4"
-      );
-    }
+    AnimationTimeline.to(
+      drinkCoolerDoorLeftRef.current.children[0].children[0].material,
+      { opacity: 1, duration: AnimationTimings.Camera4 },
+      "camera-4"
+    );
+    AnimationTimeline.to(
+      drinkCoolerDoorLeftHighlightRef.current.children[0].children[0].material,
+      { opacity: 0, duration: AnimationTimings.Camera4 },
+      "camera-4"
+    );
 
+    AnimationTimeline.to(
+      drinkCoolerDoorRightRef.current.children[0].children[1].material,
+      { opacity: 1, duration: AnimationTimings.Camera4 },
+      "camera-4"
+    );
+    AnimationTimeline.to(
+      drinkCoolerDoorRightHighlightRef.current.children[0].children[1].material,
+      { opacity: 0, duration: AnimationTimings.Camera4 },
+      "camera-4"
+    );
+    
     AnimationTimeline.to(
       cartBodyRef.current.position,
       {
@@ -506,20 +486,6 @@ function FoodCart(props) {
         ref={drinkCoolerBodyHighlightRef}
       ></primitive>
 
-      <primitive
-        object={drinkCoolerDoor}
-        position={position}
-        rotation={rotation}
-        scale={scale}
-        ref={drinkCoolerDoorRef}
-      ></primitive>
-      <primitive
-        object={drinkCoolerDoorHighlight}
-        position={position}
-        rotation={rotation}
-        scale={scale}
-        ref={drinkCoolerDoorHighlightRef}
-      ></primitive>
       <primitive
         object={drinkCoolerDoorLeft}
         position={position}
