@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/world-of-halal/',
   server: {
     base: '/world-of-halal/',
-    port: 3000,
+    port: 3001,
   },
   plugins: [react()],
 });
