@@ -209,11 +209,12 @@ function App() {
                 $165 billion by 2029. It’s a unique new factor, accelerated by
                 the pandemic, that will thrust many in the industry into
                 uncertain waters.
-                <br /><br />
-                For now, however, Ayman is content to run his halal cart just like
-                he has for the past 23 years. Even as the food cart industry has
-                changed, and more carts have cropped up in nearby spots, Ayman
-                says he doesn’t see it as competition.
+                <br />
+                <br />
+                For now, however, Ayman is content to run his halal cart just
+                like he has for the past 23 years. Even as the food cart
+                industry has changed, and more carts have cropped up in nearby
+                spots, Ayman says he doesn’t see it as competition.
               </p>
             </div>
             <p>
@@ -228,13 +229,13 @@ function App() {
       <div
         className="scrollPrompt"
         style={{
-          top: `1055vh`,
+          top: `1100vh`,
         }}
       >
         Scroll down to see Ayman's Cart in 360° <span id="scrollArrow">↓</span>
       </div>
       <TitleSlide
-        viewportPosition={1180}
+        viewportPosition={1280}
         credits={
           "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, ©2023"
         }

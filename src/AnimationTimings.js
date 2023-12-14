@@ -19,10 +19,10 @@ export const AnimationTimings = {
   Wait8: 100, //770
   FadeCartOut: 50,
   WaitEnd: 250, //1070
-  FadeCartIn: 50,
+  FadeCartIn: 150,
   ZoomInCart: 30,
-  FadeSphereIn: 50, //1200
+  FadeSphereIn: 50, //1300
   End: 0,
 };
 
-// NOTE: This should total 1200. Each unit represents 1vh (since our entire article is 1000vh in height total)
+// NOTE: This should total 1300. Each unit represents 1vh (since our entire article is 1000vh in height total)
