@@ -12,6 +12,8 @@ const cartBodyUrl = `${import.meta.env.BASE_URL}/models/cart-body.fbx`;
 const chassisAndItemsUrl = `${import.meta.env.BASE_URL}/models/chassis-and-items.fbx`;
 const drinkCoolerBodyUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-body.fbx`;
 const drinkCoolerDoorUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-door.fbx`;
+const drinkCoolerDoorLeftUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-outside-door-left.fbx`;
+const drinkCoolerDoorRightUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-outside-door-right.fbx`;
 const flatGrillUrl = `${import.meta.env.BASE_URL}/models/flat-grill.fbx`;
 const floorSpaceUrl = `${import.meta.env.BASE_URL}/models/floor-space.fbx`;
 const generatorUrl = `${import.meta.env.BASE_URL}/models/generator.fbx`;
@@ -69,6 +71,10 @@ function FoodCart(props) {
   const drinkCoolerBodyHighlightRef = useRef();
   const drinkCoolerDoorRef = useRef();
   const drinkCoolerDoorHighlightRef = useRef();
+  const drinkCoolerDoorLeftRef = useRef();
+  const drinkCoolerDoorLeftHighlightRef = useRef();
+  const drinkCoolerDoorRightRef = useRef();
+  const drinkCoolerDoorRightHighlightRef = useRef();
   const flatGrillRef = useRef();
   const flatGrillHighlightRef = useRef();
   const floorSpaceRef = useRef();
@@ -92,7 +98,9 @@ function FoodCart(props) {
   const [cartBody, cartBodyHighlight] = LoadModel(cartBodyUrl);
   const [chassisAndItems, chassisAndItemsHighlight] = LoadModel(chassisAndItemsUrl);
   const [drinkCoolerBody, drinkCoolerBodyHighlight] = LoadModel(drinkCoolerBodyUrl);
-  const [drinkCoolerDoor, drinkCooloerDoorHighlight] = LoadModel(drinkCoolerDoorUrl);
+  const [drinkCoolerDoor, drinkCoolerDoorHighlight] = LoadModel(drinkCoolerDoorUrl);
+  const [drinkCoolerDoorRight, drinkCoolerDoorRightHighlight] = LoadModel(drinkCoolerDoorRightUrl);
+  const [drinkCoolerDoorLeft, drinkCoolerDoorLeftHighlight] = LoadModel(drinkCoolerDoorLeftUrl);
   const [flatGrill, flatGrillHighlight] = LoadModel(flatGrillUrl);
   const [floorSpace, floorSpaceHighlight] = LoadModel(floorSpaceUrl);
   const [generator, generatorHighlight] = LoadModel(generatorUrl);
@@ -129,20 +137,6 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera2 },
       "camera-2"
     );
-    for (var i = 0; i < drinkCoolerDoorRef.current.children.length; i++){
-      for (var j = 0; j < drinkCoolerDoorRef.current.children[i].children.length; j++){
-        AnimationTimeline.to(
-          drinkCoolerDoorRef.current.children[i].children[j].material,
-          { opacity: 0, duration: AnimationTimings.Camera2 },
-          "camera-2"
-        );
-        AnimationTimeline.to(
-          drinkCoolerDoorHighlightRef.current.children[i].children[j].material,
-          { opacity: 1, duration: AnimationTimings.Camera2 },
-          "camera-2"
-        );
-      }
-    }
     for (var i = 0; i < drinkCoolerBodyRef.current.children[0].children.length; i++){
       AnimationTimeline.to(
         drinkCoolerBodyRef.current.children[0].children[i].material,
@@ -165,29 +159,32 @@ function FoodCart(props) {
       { opacity: 1, duration: AnimationTimings.Camera2 },
       "camera-2"
     );
-    /*for (var i = 0; i < chassisAndItemsRef.current.children.length; i++){
-      AnimationTimeline.to(
-        chassisAndItemsRef.current.children[i].material,
-        { opacity: 0.3, duration: AnimationTimings.Camera2 },
-        "camera-2"
-      );
-    }*/
 
-
-    for (var i = 0; i < drinkCoolerDoorRef.current.children.length; i++){
-      for (var j = 0; j < drinkCoolerDoorRef.current.children[i].children.length; j++){
+    for (var i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++){
+      for (var j = 0; j < drinkCoolerDoorLeftRef.current.children[i].length; j++){
         AnimationTimeline.to(
-          drinkCoolerDoorRef.current.children[i].children[j].material,
-          { opacity: 1, duration: AnimationTimings.Camera4 },
-          "camera-4"
+          drinkCoolerDoorLeftRef.current.children[i].children[j].material,
+          { opacity: 0, duration: AnimationTimings.Camera2 },
+          "camera-2"
         );
         AnimationTimeline.to(
-          drinkCoolerDoorHighlightRef.current.children[i].children[j].material,
-          { opacity: 0, duration: AnimationTimings.Camera4 },
-          "camera-4"
+          drinkCoolerDoorLeftHighlightRef.current.children[i].children[j].material,
+          { opacity: 0.4, duration: AnimationTimings.Camera2 },
+          "camera-2"
+        );
+        AnimationTimeline.to(
+          drinkCoolerDoorRightRef.current.children[i].children[j].material,
+          { opacity: 0, duration: AnimationTimings.Camera2 },
+          "camera-2"
+        );
+        AnimationTimeline.to(
+          drinkCoolerDoorRightHighlightRef.current.children[i].children[j].material,
+          { opacity: 0.4, duration: AnimationTimings.Camera2 },
+          "camera-2"
         );
       }
     }
+    
     for (var i = 0; i < drinkCoolerBodyRef.current.children[0].children.length; i++){
       AnimationTimeline.to(
         drinkCoolerBodyRef.current.children[0].children[i].material,
@@ -210,7 +207,30 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera4 },
       "camera-4"
     );
-
+    for (var i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++){
+      for (var j = 0; j < drinkCoolerDoorLeftRef.current.children[i].length; j++){
+        AnimationTimeline.to(
+          drinkCoolerDoorLeftRef.current.children[i].children[j].material,
+          { opacity: 1, duration: AnimationTimings.Camera4 },
+          "camera-4"
+        );
+        AnimationTimeline.to(
+          drinkCoolerDoorLeftHighlightRef.current.children[i].children[j].material,
+          { opacity: 0, duration: AnimationTimings.Camera4 },
+          "camera-4"
+        );
+        AnimationTimeline.to(
+          drinkCoolerDoorRightRef.current.children[i].children[j].material,
+          { opacity: 1, duration: AnimationTimings.Camera4 },
+          "camera-4"
+        );
+        AnimationTimeline.to(
+          drinkCoolerDoorRightHighlightRef.current.children[i].children[j].material,
+          { opacity: 0, duration: AnimationTimings.Camera4 },
+          "camera-4"
+        );
+      }
+    }
     for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++){
       AnimationTimeline.to(
         ledPanelRef.current.children[0].children[i].material,
@@ -226,7 +246,32 @@ function FoodCart(props) {
     
     AnimationTimeline.to(
       cartBodyRef.current.position,
-      {y: 200, duration: AnimationTimings.Wait35 },
+      {y: 150, duration: AnimationTimings.Wait35 },
+      "wait-35"
+    );
+    AnimationTimeline.to(
+      generatorRef.current.position,
+      {y: 150, duration: AnimationTimings.Wait35 },
+      "wait-35"
+    );
+    AnimationTimeline.to(
+      ledPanelRef.current.position,
+      {y: 150, duration: AnimationTimings.Wait35 },
+      "wait-35"
+    );
+    AnimationTimeline.to(
+      ledPanelHighlightRef.current.position,
+      {y: 150, duration: AnimationTimings.Wait35 },
+      "wait-35"
+    );
+    AnimationTimeline.to(
+      topBannerRef.current.position,
+      {y: 150, duration: AnimationTimings.Wait35 },
+      "wait-35"
+    );
+    AnimationTimeline.to(
+      slidingDoorRef.current.position,
+      {y: 150, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
 
@@ -349,7 +394,31 @@ function FoodCart(props) {
       {y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
-
+    AnimationTimeline.to(
+      generatorRef.current.position,
+      {y: -54, duration: AnimationTimings.WaitEnd },
+      "wait-end"
+    );
+    AnimationTimeline.to(
+      ledPanelRef.current.position,
+      {y: -54, duration: AnimationTimings.WaitEnd },
+      "wait-end"
+    );
+    AnimationTimeline.to(
+      ledPanelHighlightRef.current.position,
+      {y: -54, duration: AnimationTimings.WaitEnd },
+      "wait-end"
+    );
+    AnimationTimeline.to(
+      topBannerRef.current.position,
+      {y: -54, duration: AnimationTimings.WaitEnd },
+      "wait-end"
+    );
+    AnimationTimeline.to(
+      slidingDoorRef.current.position,
+      {y: -54, duration: AnimationTimings.WaitEnd },
+      "wait-end"
+    );
 
     return () => AnimationTimeline.kill();
   }, [generatorRef]);
@@ -367,7 +436,11 @@ function FoodCart(props) {
       <primitive object={drinkCoolerBodyHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerBodyHighlightRef}></primitive>
 
       <primitive object={drinkCoolerDoor} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorRef}></primitive>
-      <primitive object={drinkCooloerDoorHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorHighlightRef}></primitive>
+      <primitive object={drinkCoolerDoorHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorHighlightRef}></primitive>
+      <primitive object={drinkCoolerDoorLeft} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorLeftRef}></primitive>
+      <primitive object={drinkCoolerDoorLeftHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorLeftHighlightRef}></primitive>
+      <primitive object={drinkCoolerDoorRight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorRightRef}></primitive>
+      <primitive object={drinkCoolerDoorRightHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorRightHighlightRef}></primitive>
 
       <primitive object={flatGrill} position={position} rotation={rotation} scale={scale} ref={flatGrillRef}></primitive>
       <primitive object={flatGrillHighlight} position={position} rotation={rotation} scale={scale}ref={flatGrillHighlightRef}></primitive>
