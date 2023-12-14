@@ -49,6 +49,7 @@ body {
   color: white;
   font-family: "love_ya_like_a_sisterregular";
   text-shadow: 1px 1px 4px black;
+  padding-left: 1rem;
 }
 
 .subtitle {
@@ -57,19 +58,19 @@ body {
   width: fit-content;
   font-family: "love_ya_like_a_sisterregular";
   text-shadow: 1px 1px 2.5px white;
+  padding-left: 1rem;
 }
 
 .credits {
-  font-size: 22px;
+  font-size: 1rem;
   background-color: rgb(255, 255, 255, 0.8);
-  width: fit-content;
-  margin-top: 25px;
-  text-align: left;
-
-  /* border-radius: 10px; */
-  width: 60vw;
+  width: 80vw;
+  padding: 0.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translate(-50%, 0);
   z-index: 50;
-  padding-left: 10px;
   font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
   box-shadow: 2cm, 2cm;
 }
@@ -221,10 +222,6 @@ a {
   }
 }
 
-.credits {
-  font-family: "Hedvig Letters Serif", serif;
-}
-
 @media all and (min-width: 768px) {
   .titleSlide {
     margin-top: 7vh;
@@ -285,5 +282,10 @@ a {
   #foodPhoto {
     width: 30%;
     margin-right: 3rem;
+  }
+
+  .credits {
+    width: unset;
+    font-size: 1.375rem;
   }
 }
