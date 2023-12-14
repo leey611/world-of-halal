@@ -102,20 +102,6 @@ body {
   right: 5vw;
 }
 
-.overlaySlideBlack {
-  width: 65%;
-  font-size: 22px;
-  color: white;
-  border-radius: 10px;
-  z-index: 50;
-  padding: 1.5rem;
-  font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 150%;
-}
-
 #blackCard {
   position: absolute;
   /* Adjust this value based on where you want the black card to start sticking */
@@ -127,70 +113,29 @@ body {
   background-color: rgb(18, 18, 18);
   color: white;
   z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-#blackCardTop {
-  display: flex;
-  align-items: flex-start;
-  padding-top: 2rem;
-  justify-content: space-evenly;
 }
 
 #cookingPhoto {
   display: block;
-  /* padding-right: 2rem; */
-  width: 800px;
-  max-width: 100%;
-  /* margin-right: 20px; */
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  align-items: flex-end;
-  margin-left: 0;
-  margin-right: 0;
-  /* position: absolute;
-  max-width: 42em;
-  margin-left: 8em;
-  margin-right: 50em;
-  margin-top: 10.5em;
-  margin-bottom: 10em; */
+  margin: auto;
+  width: 100%;
 }
 
 #foodPhoto {
   display: block;
-  padding-right: 2rem;
-  width: 350px;
-  max-width: 100%;
-  margin-right: 20px;
-  padding-top: 2rem;
+  width: 100%;
 }
 
 #cashPhoto {
   display: block;
-  padding-left: 2rem;
-  width: 500px;
-  max-width: 100%;
-  margin-right: 20px;
-  padding-top: 2rem;
+  width: 100%;
 }
-
-#blackCardBottomParagraph {
+.overlaySlideBlack {
+  padding: 2rem 0;
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: auto;
 }
 
-#blackCardPhotoParagraph {
-  display: flex;
-
-  padding-bottom: 1rem;
-  align-items: center;
-  /* align-items: ; */
-}
 
 a {
   color: rgb(209, 135, 255);
@@ -293,7 +238,6 @@ a {
   }
 
   .overlaySlide {
-    /* position: absolute; */
     text-align: left;
     right: 50px;
     font-size: 1.375rem;
@@ -307,6 +251,39 @@ a {
     left: 50px;
     background-color: rgb(0, 0, 0, 0.12);
     width: 25vw;
-    
+  }
+
+  .overlaySlideBlack {
+    width: 65%;
+    font-size: 22px;
+    color: white;
+    border-radius: 10px;
+    z-index: 50;
+    font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
+  }
+
+  #cookingPhoto {
+    width: 40vw;
+  }
+
+  #blackCardPhotoParagraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+  }
+
+  #blackCardPhotoParagraph p {
+    margin: 0;
+  }
+
+  #cashPhoto {
+    width: 45%;
+    margin-left: 2.8rem;
+  }
+
+  #foodPhoto {
+    width: 30%;
+    margin-right: 3rem;
   }
 }
