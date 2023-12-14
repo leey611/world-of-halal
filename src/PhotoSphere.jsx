@@ -11,6 +11,19 @@ const photoScale = 20;
 const rotationSpeed = 0.001;
 const dragImgUrl = `${import.meta.env.BASE_URL}/images/drag.png`;
 
+function SphereMarker(props){
+  const { children, position, rotation } = props;
+
+  console.log(position)
+  return (
+    <Html position={position} rotation={rotation}>
+      <div className="sphere-marker">
+        {children}
+      </div>
+    </Html>
+  );
+}
+
 function PhotoSphere(props) {
   const { children, photoUrl, position } = props;
   const texture = useTexture(photoUrl);
@@ -58,16 +71,23 @@ function PhotoSphere(props) {
     }
   });
 
+  var rotation = [ -rotationX / 200, -rotationY / 200, 0];
+
   return (
-    <mesh position={position} rotation={[0.2 - (rotationX / 200), 3.1 - (rotationY / 200), 0]} scale={photoScale} ref={sphereRef} {...bind()}>
-        <sphereGeometry/>
-        <meshStandardMaterial ref={meshRef} map={texture} side={BackSide} transparent={true} opacity={0}/>
-        <Html calculatePosition={() => [0, 0, 0]}><div className="drag-img-container">
-          <div className="drag-img-div"> <img id="drag-img" className="drag-img" src={dragImgUrl} /> </div>
-          </div>
-        </Html>
-      {children}
-    </mesh>
+    <group>
+      <mesh position={position} rotation={rotation} scale={photoScale} ref={sphereRef} {...bind()}>
+          <sphereGeometry/>
+          <meshStandardMaterial ref={meshRef} map={texture} side={BackSide} transparent={true} opacity={0}/>
+          <Html calculatePosition={() => [0, 0, 0]}><div className="drag-img-container">
+            <div className="drag-img-div"> <img id="drag-img" className="drag-img" src={dragImgUrl} /> </div>
+            </div>
+          </Html>
+          <SphereMarker position={[position[0], position[1] + 0, position[2] - 0]} rotation={rotation}> Test Test Test </SphereMarker>
+        {children}
+      </mesh>
+    </group>
+    
+
   );
 
 }

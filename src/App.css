@@ -131,7 +131,7 @@ body {
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
-  height: 155vh; /* Adjust this value based on the desired height of the black card */
+  height: 250vh; /* Adjust this value based on the desired height of the black card */
   background-color: rgb(18, 18, 18);
   color: white;
   z-index: 1;
@@ -151,7 +151,7 @@ body {
 #cookingPhoto {
   display: block;
   /* padding-right: 2rem; */
-  width: 850px;
+  width: 800px;
   max-width: 100%;
   /* margin-right: 20px; */
   padding-top: 3rem;
@@ -170,7 +170,7 @@ body {
 #foodPhoto {
   display: block;
   padding-right: 2rem;
-  width: 380px;
+  width: 350px;
   max-width: 100%;
   margin-right: 20px;
   padding-top: 2rem;
@@ -179,7 +179,7 @@ body {
 #cashPhoto {
   display: block;
   padding-left: 2rem;
-  width: 380px;
+  width: 500px;
   max-width: 100%;
   margin-right: 20px;
   padding-top: 2rem;
@@ -187,12 +187,16 @@ body {
 
 #blackCardBottomParagraph {
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #blackCardPhotoParagraph {
   display: flex;
 
   padding-bottom: 1rem;
+  align-items: center;
   /* align-items: ; */
 }
 
