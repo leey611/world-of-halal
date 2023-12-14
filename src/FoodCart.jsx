@@ -9,11 +9,21 @@ import * as THREE from "three";
 
 const fbxUrl = `${import.meta.env.BASE_URL}/models/halal-cart2.fbx`;
 const cartBodyUrl = `${import.meta.env.BASE_URL}/models/cart-body.fbx`;
-const chassisAndItemsUrl = `${import.meta.env.BASE_URL}/models/chassis-and-items.fbx`;
-const drinkCoolerBodyUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-body.fbx`;
-const drinkCoolerDoorUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-door.fbx`;
-const drinkCoolerDoorLeftUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-outside-door-left.fbx`;
-const drinkCoolerDoorRightUrl = `${import.meta.env.BASE_URL}/models/drink-cooler-outside-door-right.fbx`;
+const chassisAndItemsUrl = `${
+  import.meta.env.BASE_URL
+}/models/chassis-and-items.fbx`;
+const drinkCoolerBodyUrl = `${
+  import.meta.env.BASE_URL
+}/models/drink-cooler-body.fbx`;
+const drinkCoolerDoorUrl = `${
+  import.meta.env.BASE_URL
+}/models/drink-cooler-door.fbx`;
+const drinkCoolerDoorLeftUrl = `${
+  import.meta.env.BASE_URL
+}/models/drink-cooler-outside-door-left.fbx`;
+const drinkCoolerDoorRightUrl = `${
+  import.meta.env.BASE_URL
+}/models/drink-cooler-outside-door-right.fbx`;
 const flatGrillUrl = `${import.meta.env.BASE_URL}/models/flat-grill.fbx`;
 const floorSpaceUrl = `${import.meta.env.BASE_URL}/models/floor-space.fbx`;
 const generatorUrl = `${import.meta.env.BASE_URL}/models/generator.fbx`;
@@ -28,7 +38,7 @@ const normalMat = new THREE.MeshStandardMaterial({
   color: 0xffffff,
   side: THREE.DoubleSide,
   transparent: true,
-  opacity: 1
+  opacity: 1,
 });
 
 const highlightMat = new THREE.MeshStandardMaterial({
@@ -38,10 +48,10 @@ const highlightMat = new THREE.MeshStandardMaterial({
   opacity: 0,
 });
 
-function LoadModel(url){
+function LoadModel(url) {
   const normalModel = useLoader(FBXLoader, url);
   const highlightModel = normalModel.clone();
-  
+
   if (normalModel) {
     normalModel.traverse((child) => {
       if (child instanceof THREE.Mesh) {
@@ -94,13 +104,19 @@ function FoodCart(props) {
   const topBannerRef = useRef();
   const topBannerHighlightRef = useRef();
 
-
   const [cartBody, cartBodyHighlight] = LoadModel(cartBodyUrl);
-  const [chassisAndItems, chassisAndItemsHighlight] = LoadModel(chassisAndItemsUrl);
-  const [drinkCoolerBody, drinkCoolerBodyHighlight] = LoadModel(drinkCoolerBodyUrl);
-  const [drinkCoolerDoor, drinkCoolerDoorHighlight] = LoadModel(drinkCoolerDoorUrl);
-  const [drinkCoolerDoorRight, drinkCoolerDoorRightHighlight] = LoadModel(drinkCoolerDoorRightUrl);
-  const [drinkCoolerDoorLeft, drinkCoolerDoorLeftHighlight] = LoadModel(drinkCoolerDoorLeftUrl);
+  const [chassisAndItems, chassisAndItemsHighlight] =
+    LoadModel(chassisAndItemsUrl);
+  const [drinkCoolerBody, drinkCoolerBodyHighlight] =
+    LoadModel(drinkCoolerBodyUrl);
+  const [drinkCoolerDoor, drinkCoolerDoorHighlight] =
+    LoadModel(drinkCoolerDoorUrl);
+  const [drinkCoolerDoorRight, drinkCoolerDoorRightHighlight] = LoadModel(
+    drinkCoolerDoorRightUrl
+  );
+  const [drinkCoolerDoorLeft, drinkCoolerDoorLeftHighlight] = LoadModel(
+    drinkCoolerDoorLeftUrl
+  );
   const [flatGrill, flatGrillHighlight] = LoadModel(flatGrillUrl);
   const [floorSpace, floorSpaceHighlight] = LoadModel(floorSpaceUrl);
   const [generator, generatorHighlight] = LoadModel(generatorUrl);
@@ -115,7 +131,6 @@ function FoodCart(props) {
   const scale = 0.04;
 
   useEffect(() => {
-
     AnimationTimeline.to(
       generatorRef.current.children[0].children[0].material,
       { opacity: 0, duration: AnimationTimings.Camera1 },
@@ -137,8 +152,12 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera2 },
       "camera-2"
     );
-    for (let i = 0; i < drinkCoolerBodyRef.current.children[0].children.length; i++){
-      const child = drinkCoolerBodyRef.current.children[0].children[i]
+    for (
+      let i = 0;
+      i < drinkCoolerBodyRef.current.children[0].children.length;
+      i++
+    ) {
+      const child = drinkCoolerBodyRef.current.children[0].children[i];
       AnimationTimeline.to(
         child.material,
         { opacity: 0, duration: AnimationTimings.Camera2 },
@@ -161,10 +180,10 @@ function FoodCart(props) {
       "camera-2"
     );
 
-    for (let i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++){
-      const children = drinkCoolerDoorLeftRef.current.children[i]
-      for(let j = 0; j < children.children.length; j++) {
-        const child = children.children[j]
+    for (let i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++) {
+      const children = drinkCoolerDoorLeftRef.current.children[i];
+      for (let j = 0; j < children.children.length; j++) {
+        const child = children.children[j];
         AnimationTimeline.to(
           child.material,
           { opacity: 0, duration: AnimationTimings.Camera2 },
@@ -187,9 +206,13 @@ function FoodCart(props) {
         );
       }
     }
-    
-    for (var i = 0; i < drinkCoolerBodyRef.current.children[0].children.length; i++){
-      const children = drinkCoolerBodyRef.current.children[0].children
+
+    for (
+      var i = 0;
+      i < drinkCoolerBodyRef.current.children[0].children.length;
+      i++
+    ) {
+      const children = drinkCoolerBodyRef.current.children[0].children;
       for (let j = 0; j < children.length; j++) {
         AnimationTimeline.to(
           children[j].material,
@@ -202,8 +225,6 @@ function FoodCart(props) {
           "camera-4"
         );
       }
-      
-      
     }
     AnimationTimeline.to(
       sodaRef.current.children[0].material,
@@ -215,12 +236,12 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera4 },
       "camera-4"
     );
-    for (var i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++){
-      const children = drinkCoolerDoorLeftRef.current.children[i].children
-      for(let j = 0; j < children.length; j++) {
-        const child = children[j]
+    for (var i = 0; i < drinkCoolerDoorLeftRef.current.children.length; i++) {
+      const children = drinkCoolerDoorLeftRef.current.children[i].children;
+      for (let j = 0; j < children.length; j++) {
+        const child = children[j];
         AnimationTimeline.to(
-          child .material,
+          child.material,
           { opacity: 1, duration: AnimationTimings.Camera4 },
           "camera-4"
         );
@@ -241,7 +262,7 @@ function FoodCart(props) {
         );
       }
     }
-    for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++){
+    for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++) {
       AnimationTimeline.to(
         ledPanelRef.current.children[0].children[i].material,
         { opacity: 0, duration: AnimationTimings.Camera4 },
@@ -253,39 +274,44 @@ function FoodCart(props) {
         "camera-4"
       );
     }
-    
+
     AnimationTimeline.to(
       cartBodyRef.current.position,
-      {y: 150, z: position[2] - 0.1, duration: AnimationTimings.Wait35 },
+      {
+        // x: position[0] + 1,
+        y: 350,
+        z: position[2] + 0.1,
+        duration: AnimationTimings.Wait35,
+      },
       "wait-35"
     );
     AnimationTimeline.to(
       generatorRef.current.position,
-      {y: 150, duration: AnimationTimings.Wait35 },
+      { y: 350, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
     AnimationTimeline.to(
       ledPanelRef.current.position,
-      {y: 150, duration: AnimationTimings.Wait35 },
+      { y: 550, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
     AnimationTimeline.to(
       ledPanelHighlightRef.current.position,
-      {y: 150, duration: AnimationTimings.Wait35 },
+      { y: 350, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
     AnimationTimeline.to(
       topBannerRef.current.position,
-      {y: 150, duration: AnimationTimings.Wait35 },
+      { y: 350, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
     AnimationTimeline.to(
       slidingDoorRef.current.position,
-      {y: 150, duration: AnimationTimings.Wait35 },
+      { y: 350, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
 
-    for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++){
+    for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++) {
       AnimationTimeline.to(
         ledPanelRef.current.children[0].children[i].material,
         { opacity: 1, duration: AnimationTimings.Wait35 },
@@ -297,7 +323,7 @@ function FoodCart(props) {
         "wait-35"
       );
     }
-    
+
     AnimationTimeline.to(
       flatGrillRef.current.children[0].children[0].material,
       { opacity: 0, duration: AnimationTimings.Camera5 },
@@ -319,7 +345,7 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera6 },
       "camera-6"
     );
-    for (var i = 0; i < gyroWheelRef.current.children[0].children.length; i++){
+    for (var i = 0; i < gyroWheelRef.current.children[0].children.length; i++) {
       AnimationTimeline.to(
         gyroWheelRef.current.children[0].children[i].material,
         { opacity: 0, duration: AnimationTimings.Camera6 },
@@ -332,7 +358,7 @@ function FoodCart(props) {
       );
     }
 
-    for (var i = 0; i < gyroWheelRef.current.children[0].children.length; i++){
+    for (var i = 0; i < gyroWheelRef.current.children[0].children.length; i++) {
       AnimationTimeline.to(
         gyroWheelRef.current.children[0].children[i].material,
         { opacity: 1, duration: AnimationTimings.Camera7 },
@@ -344,8 +370,8 @@ function FoodCart(props) {
         "camera-7"
       );
     }
-    for (var i = 0; i < storageRef.current.children.length; i++){
-      for (var j = 0; j < storageRef.current.children[i].children.length; j++){
+    for (var i = 0; i < storageRef.current.children.length; i++) {
+      for (var j = 0; j < storageRef.current.children[i].children.length; j++) {
         AnimationTimeline.to(
           storageRef.current.children[i].children[j].material,
           { opacity: 0, duration: AnimationTimings.Camera7 },
@@ -359,8 +385,8 @@ function FoodCart(props) {
       }
     }
 
-    for (var i = 0; i < storageRef.current.children.length; i++){
-      for (var j = 0; j < storageRef.current.children[i].children.length; j++){
+    for (var i = 0; i < storageRef.current.children.length; i++) {
+      for (var j = 0; j < storageRef.current.children[i].children.length; j++) {
         AnimationTimeline.to(
           storageHighlightRef.current.children[i].children[j].material,
           { opacity: 0, duration: AnimationTimings.Camera8 },
@@ -379,16 +405,16 @@ function FoodCart(props) {
       "camera-8"
     );
 
-    for (var i = 0; i < storageRef.current.children.length; i++){
-      for (var j = 0; j < storageRef.current.children[i].children.length; j++){
+    for (var i = 0; i < storageRef.current.children.length; i++) {
+      for (var j = 0; j < storageRef.current.children[i].children.length; j++) {
         AnimationTimeline.to(
           storageRef.current.children[i].children[j].material,
-          { opacity: 1, duration: AnimationTimings.WaitEnd},
+          { opacity: 1, duration: AnimationTimings.WaitEnd },
           "wait-end"
         );
       }
     }
-    
+
     AnimationTimeline.to(
       floorSpaceRef.current.children[0].children[0].material,
       { opacity: 1, duration: AnimationTimings.WaitEnd },
@@ -401,32 +427,32 @@ function FoodCart(props) {
     );
     AnimationTimeline.to(
       cartBodyRef.current.position,
-      {y: -54, duration: AnimationTimings.WaitEnd },
+      { y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
     AnimationTimeline.to(
       generatorRef.current.position,
-      {y: -54, duration: AnimationTimings.WaitEnd },
+      { y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
     AnimationTimeline.to(
       ledPanelRef.current.position,
-      {y: -54, duration: AnimationTimings.WaitEnd },
+      { y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
     AnimationTimeline.to(
       ledPanelHighlightRef.current.position,
-      {y: -54, duration: AnimationTimings.WaitEnd },
+      { y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
     AnimationTimeline.to(
       topBannerRef.current.position,
-      {y: -54 ,duration: AnimationTimings.WaitEnd },
+      { y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
     AnimationTimeline.to(
       slidingDoorRef.current.position,
-      {y: -54, duration: AnimationTimings.WaitEnd },
+      { y: -54, duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
 
@@ -435,51 +461,229 @@ function FoodCart(props) {
 
   return (
     <group>
-      <primitive object={cartBody} position={position} rotation={rotation} scale={scale} ref={cartBodyRef}></primitive>
-      <primitive object={cartBodyHighlight} position={position} rotation={rotation} scale={scale} ref={cartBodyHighlightRef}>
-      </primitive>
+      <primitive
+        object={cartBody}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={cartBodyRef}
+      ></primitive>
+      <primitive
+        object={cartBodyHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={cartBodyHighlightRef}
+      ></primitive>
 
-      <primitive object={chassisAndItems} position={position} rotation={rotation} scale={scale} ref={chassisAndItemsRef}></primitive>
-      <primitive object={chassisAndItemsHighlight} position={position} rotation={rotation} scale={scale} ref={chassisAndItemsHighlightRef}></primitive>
+      <primitive
+        object={chassisAndItems}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={chassisAndItemsRef}
+      ></primitive>
+      <primitive
+        object={chassisAndItemsHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={chassisAndItemsHighlightRef}
+      ></primitive>
 
-      <primitive object={drinkCoolerBody} position={position} rotation={rotation} scale={scale} ref={drinkCoolerBodyRef}></primitive>
-      <primitive object={drinkCoolerBodyHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerBodyHighlightRef}></primitive>
+      <primitive
+        object={drinkCoolerBody}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerBodyRef}
+      ></primitive>
+      <primitive
+        object={drinkCoolerBodyHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerBodyHighlightRef}
+      ></primitive>
 
-      <primitive object={drinkCoolerDoor} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorRef}></primitive>
-      <primitive object={drinkCoolerDoorHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorHighlightRef}></primitive>
-      <primitive object={drinkCoolerDoorLeft} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorLeftRef}></primitive>
-      <primitive object={drinkCoolerDoorLeftHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorLeftHighlightRef}></primitive>
-      <primitive object={drinkCoolerDoorRight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorRightRef}></primitive>
-      <primitive object={drinkCoolerDoorRightHighlight} position={position} rotation={rotation} scale={scale} ref={drinkCoolerDoorRightHighlightRef}></primitive>
+      <primitive
+        object={drinkCoolerDoor}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerDoorRef}
+      ></primitive>
+      <primitive
+        object={drinkCoolerDoorHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerDoorHighlightRef}
+      ></primitive>
+      <primitive
+        object={drinkCoolerDoorLeft}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerDoorLeftRef}
+      ></primitive>
+      <primitive
+        object={drinkCoolerDoorLeftHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerDoorLeftHighlightRef}
+      ></primitive>
+      <primitive
+        object={drinkCoolerDoorRight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerDoorRightRef}
+      ></primitive>
+      <primitive
+        object={drinkCoolerDoorRightHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={drinkCoolerDoorRightHighlightRef}
+      ></primitive>
 
-      <primitive object={flatGrill} position={position} rotation={rotation} scale={scale} ref={flatGrillRef}></primitive>
-      <primitive object={flatGrillHighlight} position={position} rotation={rotation} scale={scale}ref={flatGrillHighlightRef}></primitive>
+      <primitive
+        object={flatGrill}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={flatGrillRef}
+      ></primitive>
+      <primitive
+        object={flatGrillHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={flatGrillHighlightRef}
+      ></primitive>
 
-      <primitive object={floorSpace} position={position} rotation={rotation} scale={scale} ref={floorSpaceRef}></primitive>
-      <primitive object={floorSpaceHighlight} position={[position[0], position[1]+0.1, position[2]]} rotation={rotation} scale={scale} ref={floorSpacHighlightRef}></primitive>
+      <primitive
+        object={floorSpace}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={floorSpaceRef}
+      ></primitive>
+      <primitive
+        object={floorSpaceHighlight}
+        position={[position[0], position[1] + 0.1, position[2]]}
+        rotation={rotation}
+        scale={scale}
+        ref={floorSpacHighlightRef}
+      ></primitive>
 
-      <primitive object={generator} position={position} rotation={rotation} scale={scale} ref={generatorRef}></primitive>
-      <primitive object={generatorHighlight} position={position} rotation={rotation} scale={scale} ref={generatorHighlightRef}></primitive>
+      <primitive
+        object={generator}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={generatorRef}
+      ></primitive>
+      <primitive
+        object={generatorHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={generatorHighlightRef}
+      ></primitive>
 
-      <primitive object={gyroWheel} position={position} rotation={rotation} scale={scale} ref={gyroWheelRef}></primitive>
-      <primitive object={gyroWheelHighlight} position={position} rotation={rotation} scale={scale}ref={gyroWheelHighlightRef}></primitive>
+      <primitive
+        object={gyroWheel}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={gyroWheelRef}
+      ></primitive>
+      <primitive
+        object={gyroWheelHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={gyroWheelHighlightRef}
+      ></primitive>
 
-      <primitive object={ledPanel} position={position} rotation={rotation} scale={scale} ref={ledPanelRef}></primitive>
-      <primitive object={ledPanelHighlight} position={position} rotation={rotation} scale={scale} ref={ledPanelHighlightRef}></primitive>
+      <primitive
+        object={ledPanel}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={ledPanelRef}
+      ></primitive>
+      <primitive
+        object={ledPanelHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={ledPanelHighlightRef}
+      ></primitive>
 
-      <primitive object={slidingDoor} position={position} rotation={rotation} scale={scale} ref={slidingDoorRef}></primitive>
-      <primitive object={slidingDoorHighlight} position={position} rotation={rotation} scale={scale} ref={slidingDooHighlightrRef}></primitive>
+      <primitive
+        object={slidingDoor}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={slidingDoorRef}
+      ></primitive>
+      <primitive
+        object={slidingDoorHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={slidingDooHighlightrRef}
+      ></primitive>
 
-      <primitive object={soda} position={position} rotation={rotation} scale={scale} ref={sodaRef}></primitive>
-      <primitive object={sodaHighlight} position={position} rotation={rotation} scale={scale} ref={sodaHighlightRef}></primitive>
+      <primitive
+        object={soda}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={sodaRef}
+      ></primitive>
+      <primitive
+        object={sodaHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={sodaHighlightRef}
+      ></primitive>
 
-      <primitive object={storage} position={position} rotation={rotation} scale={scale} ref={storageRef}></primitive>
-      <primitive object={storageHighlight} position={position} rotation={rotation} scale={scale} ref={storageHighlightRef}></primitive>
+      <primitive
+        object={storage}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={storageRef}
+      ></primitive>
+      <primitive
+        object={storageHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={storageHighlightRef}
+      ></primitive>
 
-      <primitive object={topBanner} position={position} rotation={rotation} scale={scale} ref={topBannerRef}></primitive>
-      <primitive object={topBannerHighlight} position={position} rotation={rotation} scale={scale} ref={topBannerHighlightRef}></primitive>
+      <primitive
+        object={topBanner}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={topBannerRef}
+      ></primitive>
+      <primitive
+        object={topBannerHighlight}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        ref={topBannerHighlightRef}
+      ></primitive>
     </group>
-    
   );
 }
 

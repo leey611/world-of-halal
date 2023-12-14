@@ -304,7 +304,16 @@ function AnimatedCamera() {
 
     return () => AnimationTimeline.kill();
   }, []);
-  return <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 0]} />;
+  return (
+    <PerspectiveCamera
+      ref={cameraRef}
+      makeDefault
+      position={[0, 0, 0]}
+      near={0.01}
+      far={2000}
+      // fov={55}
+    />
+  );
 }
 
 export default AnimatedCamera;
