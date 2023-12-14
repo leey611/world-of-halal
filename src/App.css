@@ -117,6 +117,7 @@ body {
   display: block;
   margin: auto;
   width: 100%;
+  max-width: 1000px;
   padding-bottom: 1.2em;
   padding-top: 1em;
 }
