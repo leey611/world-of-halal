@@ -426,7 +426,7 @@ function FoodCart(props) {
   return (
     <group>
       <primitive object={cartBody} position={position} rotation={rotation} scale={scale} ref={cartBodyRef}></primitive>
-      <primitive object={cartBodyHighlight} position={position} rotation={rotation} scale={scale} ref={cartBodyHighlightRef}>
+      <primitive object={cartBodyHighlight} position={[position[0]+0.1, position[1]+0.1, position[2]+0.1]} rotation={rotation} scale={scale} ref={cartBodyHighlightRef}>
       </primitive>
 
       <primitive object={chassisAndItems} position={position} rotation={rotation} scale={scale} ref={chassisAndItemsRef}></primitive>
@@ -446,7 +446,7 @@ function FoodCart(props) {
       <primitive object={flatGrillHighlight} position={position} rotation={rotation} scale={scale}ref={flatGrillHighlightRef}></primitive>
 
       <primitive object={floorSpace} position={position} rotation={rotation} scale={scale} ref={floorSpaceRef}></primitive>
-      <primitive object={floorSpaceHighlight} position={position} rotation={rotation} scale={scale} ref={floorSpacHighlightRef}></primitive>
+      <primitive object={floorSpaceHighlight} position={[position[0], position[1]+0.1, position[2]]} rotation={rotation} scale={scale} ref={floorSpacHighlightRef}></primitive>
 
       <primitive object={generator} position={position} rotation={rotation} scale={scale} ref={generatorRef}></primitive>
       <primitive object={generatorHighlight} position={position} rotation={rotation} scale={scale} ref={generatorHighlightRef}></primitive>
