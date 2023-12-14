@@ -246,7 +246,7 @@ function FoodCart(props) {
     
     AnimationTimeline.to(
       cartBodyRef.current.position,
-      {y: 150, duration: AnimationTimings.Wait35 },
+      {y: 150, z: position[2] - 0.1, duration: AnimationTimings.Wait35 },
       "wait-35"
     );
     AnimationTimeline.to(
@@ -391,7 +391,7 @@ function FoodCart(props) {
     );
     AnimationTimeline.to(
       cartBodyRef.current.position,
-      {y: -54, duration: AnimationTimings.WaitEnd },
+      {y: -54,  duration: AnimationTimings.WaitEnd },
       "wait-end"
     );
     AnimationTimeline.to(
@@ -426,7 +426,7 @@ function FoodCart(props) {
   return (
     <group>
       <primitive object={cartBody} position={position} rotation={rotation} scale={scale} ref={cartBodyRef}></primitive>
-      <primitive object={cartBodyHighlight} position={[position[0]+0.1, position[1]+0.1, position[2]+0.1]} rotation={rotation} scale={scale} ref={cartBodyHighlightRef}>
+      <primitive object={cartBodyHighlight} position={position} rotation={rotation} scale={scale} ref={cartBodyHighlightRef}>
       </primitive>
 
       <primitive object={chassisAndItems} position={position} rotation={rotation} scale={scale} ref={chassisAndItemsRef}></primitive>
