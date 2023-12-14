@@ -254,6 +254,18 @@ function FoodCart(props) {
       { opacity: 0, duration: AnimationTimings.Camera4 },
       "camera-4"
     );
+    for (var i = 0; i < ledPanelRef.current.children[0].children.length; i++) {
+      AnimationTimeline.to(
+        ledPanelRef.current.children[0].children[i].material,
+        { opacity: 0, duration: AnimationTimings.Camera4 },
+        "camera-4"
+      );
+      AnimationTimeline.to(
+        ledPanelHighlightRef.current.children[0].children[i].material,
+        { opacity: 1, duration: AnimationTimings.Camera4 },
+        "camera-4"
+      );
+    }
     
     AnimationTimeline.to(
       cartBodyRef.current.position,
