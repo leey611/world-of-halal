@@ -573,7 +573,7 @@ function FoodCart(props) {
       ></primitive>
       <primitive
         object={floorSpaceHighlight}
-        position={[position[0], position[1] + 0.1, position[2]]}
+        position={[position[0], position[1] + 1.5, position[2]]}
         rotation={rotation}
         scale={scale}
         ref={floorSpacHighlightRef}
