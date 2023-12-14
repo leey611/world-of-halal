@@ -52,14 +52,14 @@ function App() {
       <OverlaySlide viewportPosition={100}>
         On the side of Brooklyn Bridge Boulevard, in the heart of downtown
         Brooklyn, you’ll find an establishment that has withstood the test of
-        time. Ayman [Surname] has operated his halal cart King Halal Food since
+        time. Ayman Zeedan has operated his halal cart King Halal Food since
         2000, nearly half of the 51-year-old’s life. He is one of an estimated
         20,000 vendors that work tirelessly to feed the people of New York City
         every day.{" "}
       </OverlaySlide>
 
       <OverlaySlide viewportPosition={140}>
-        “Me? I stay here. I don’t change,” Mr. Ayman says, standing at the rear
+        “Me? I stay here. I don’t change,” Mr. Zeedan says, standing at the rear
         of his truck while his employee cooks for customers inside. We visited
         him on a gusty Wednesday, on what he claimed would be an off-hour -
         still, though, people continued to line up at the window, drawn by the
@@ -229,7 +229,7 @@ function App() {
       <div
         className="scrollPrompt"
         style={{
-          top: `1100vh`,
+          top: `1030vh`,
         }}
       >
         Scroll down to see Ayman's Cart in 360° <span id="scrollArrow">↓</span>

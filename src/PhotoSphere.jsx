@@ -14,7 +14,6 @@ const dragImgUrl = `${import.meta.env.BASE_URL}/images/drag.png`;
 function SphereMarker(props){
   const { children, position, rotation } = props;
 
-  console.log(position)
   return (
     <Html position={position} rotation={rotation}>
       <div className="sphere-marker">

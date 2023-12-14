@@ -109,6 +109,11 @@ function AnimatedCamera() {
       { duration: AnimationTimings.Wait3 },
       "wait-3"
     );
+    AnimationTimeline.to(
+      cameraRef.current.position,
+      { duration: AnimationTimings.Wait35 },
+      "wait-35"
+    );
 
     AnimationTimeline.to(
       //grill
@@ -162,7 +167,7 @@ function AnimatedCamera() {
     AnimationTimeline.to(
       //storage
       cameraRef.current.position,
-      { x: -2, y: 12, z: -289, duration: AnimationTimings.Camera7 },
+      { x: 40, y: 40, z: -379, duration: AnimationTimings.Camera7 },
       "camera-7"
     );
 

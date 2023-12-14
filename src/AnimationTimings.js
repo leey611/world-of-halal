@@ -8,7 +8,8 @@ export const AnimationTimings = {
   Wait2: 50,
   Camera3: 15, // zoom up
   Camera4: 15, // move to back & rotate - LEDs, 320
-  Wait3: 50, // 400
+  Wait3: 25, // 400
+  Wait35: 25,
   Camera5: 30, //grill
   Wait5: 50,
   Camera6: 30, //gyro, 510
