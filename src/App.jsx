@@ -229,7 +229,7 @@ function App() {
       <div
         className="scrollPrompt"
         style={{
-          top: `1030vh`,
+          top: `1070vh`,
         }}
       >
         Scroll down to see Ayman's Cart in 360° <span id="scrollArrow">↓</span>
