@@ -226,17 +226,24 @@ function App() {
               The customer knows which food is good.”
             </p>
           </div>
+
+          <div
+            className="scrollPrompt"
+            style={
+              {
+                // position: "absolute",
+                // bottom: "1rem",
+                // top: `1100vh`,
+              }
+            }
+          >
+            Scroll down to see Ayman's Cart in 360°{" "}
+            <span id="scrollArrow">↓</span>
+          </div>
         </OverlaySlideBlack>
       </div>
 
-      <div
-        className="scrollPrompt"
-        style={{
-          top: `1030vh`,
-        }}
-      >
-        Scroll down to see Ayman's Cart in 360° <span id="scrollArrow">↓</span>
-      </div>
+      {/* <ScrollPrompt /> */}
       {/* <TitleSlide
         viewportPosition={1280}
         credits={

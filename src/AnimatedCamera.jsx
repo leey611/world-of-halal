@@ -309,8 +309,8 @@ function AnimatedCamera() {
       ref={cameraRef}
       makeDefault
       position={[0, 0, 0]}
-      near={0.01}
-      far={2000}
+      near={10}
+      far={500}
       // fov={55}
     />
   );

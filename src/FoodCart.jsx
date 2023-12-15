@@ -266,7 +266,7 @@ function FoodCart(props) {
         "camera-4"
       );
     }
-    
+
     AnimationTimeline.to(
       cartBodyRef.current.position,
       {
