@@ -7,8 +7,10 @@ function TitleSlide(props){
     <div className="titleSlide" style={{position: "absolute", top: `${viewportPosition}vh`, zIndex: "50"}}>
       <div className="title">{title}</div>
       <div className="subtitle">{subtitle}</div>
+      
     </div>
     {credits && <div className="credits">{credits}</div>}
+    
   </>
   )
 }

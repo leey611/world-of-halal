@@ -68,7 +68,7 @@ body {
   padding: 0.5rem;
   position: absolute;
   left: 50%;
-  bottom: 1rem;
+  top: 80vh;
   transform: translate(-50%, 0);
   z-index: 50;
   font-family: "Hedvig Letters Serif", serif, "Times New Roman", Times, serif;
@@ -287,5 +287,7 @@ a {
   .credits {
     width: unset;
     font-size: 1.375rem;
+    left: 1rem;
+    transform: unset;
   }
 }

@@ -47,6 +47,9 @@ function App() {
         viewportPosition={4}
         title={"The King of Halal"}
         subtitle={"How one man keeps Downtown Brooklyn fed"}
+        credits={
+          "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, ©2023"
+        }
       ></TitleSlide>
 
       <OverlaySlide viewportPosition={100}>
@@ -234,12 +237,12 @@ function App() {
       >
         Scroll down to see Ayman's Cart in 360° <span id="scrollArrow">↓</span>
       </div>
-      <TitleSlide
+      {/* <TitleSlide
         viewportPosition={1280}
         credits={
           "By Joyce Zheng, Yu Lee, Oliver Zichen Yuan, & Isabel Lee, ©2023"
         }
-      ></TitleSlide>
+      ></TitleSlide> */}
 
       {/* 3D scene container */}
       <Scene />
