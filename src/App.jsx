@@ -226,8 +226,12 @@ function App() {
               The customer knows which food is good.”
             </p>
           </div>
-
-          <div
+          
+          
+        </OverlaySlideBlack>
+        
+      </div>
+      <div
             className="scrollPrompt"
             style={
               {
@@ -239,10 +243,7 @@ function App() {
           >
             Scroll down to see Ayman's Cart in 360°{" "}
             <span id="scrollArrow">↓</span>
-          </div>
-        </OverlaySlideBlack>
       </div>
-
       {/* <ScrollPrompt /> */}
       {/* <TitleSlide
         viewportPosition={1280}
