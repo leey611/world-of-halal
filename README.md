@@ -1,7 +1,9 @@
 # World Of Halal
 
 World of Halal is an interactive 3D website that unfolds the compelling story behind King Halal Food, a prominent halal cart owned by Ayman Zeedan, nestled in the heart of downtown Brooklyn. This project is a unique blend of data journalism and interactive storytelling, offering users a virtual tour to explore the intricacies of Ayman's halal cart business.
-[Watch demo](https://vimeo.com/904960429)
+[Explore live](https://leey611.github.io/world-of-halal/)
+or 
+[watch demo](https://vimeo.com/904960429)
 
 ## Features
 
